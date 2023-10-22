@@ -30,14 +30,14 @@
 
     /*---slider activation---*/
     $('.slider_area').owlCarousel({
-        animateOut: 'fadeOut',
-        autoplay: true,
-		loop: true,
-        nav: false,
-        autoplay: false,
-        autoplayTimeout: 8000,
-        items: 1,
-        dots:true,
+      animateOut: 'fadeOut',
+      autoplay: true,
+      loop: true,
+      nav: false,
+      autoplay: false,
+      autoplayTimeout: 8000,
+      items: 1,
+      dots:true,
     });
     
     /*---product_column3 activation---*/
@@ -168,10 +168,11 @@
         autoplay: true,
 		loop: true,
         nav: true,
-        margin:30,
+        autoplay: false,
         autoplayTimeout: 8000,
-        items: 4,
+        items: 3,
         dots:false,
+        margin: 30,
         navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
         responsiveClass:true,
 		responsive:{
@@ -182,7 +183,7 @@
 				items:2,
 			},
             992:{
-				items:4,
+				items:3,
 			},
 		  
         }
@@ -278,7 +279,7 @@
     /*---testimonial active activation---*/
     $('.testimonial_active').owlCarousel({
         autoplay: true,
-		loop: true,
+		    loop: true,
         nav: false,
         autoplay: false,
         autoplayTimeout: 8000,
@@ -381,19 +382,6 @@
     });
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-	   
-	   
-	    $( "#slider-range1" ).slider({
-        range: true,
-        min: 0,
-        max: 500,
-        values: [ 0, 500 ],
-        slide: function( event, ui ) {
-        $( "#amount1" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-       }
-    });
-    $( "#amount1" ).val( "$" + $( "#slider-range1" ).slider( "values", 0 ) +
-       " - $" + $( "#slider-range1" ).slider( "values", 1 ) );
     
     /*niceSelect*/
      $('.niceselect_option').niceSelect();
@@ -441,6 +429,33 @@
         container: 'body'
     });
 
+    
+    /*---categories slideToggle---*/
+    $(".categories_title").on("click", function() {
+        $(this).toggleClass('active');
+        $('.categories_menu_toggle').slideToggle('medium');
+    }); 
+    
+    
+ 
+    
+   /*----------  Category more toggle  ----------*/
+
+	$(".categories_menu_toggle li.hidden").hide();
+	   $("#more-btn").on('click', function (e) {
+
+		e.preventDefault();
+		$(".categories_menu_toggle li.hidden").toggle(500);
+		var htmlAfter = '<i class="fa fa-minus" aria-hidden="true"></i> Less Categories';
+		var htmlBefore = '<i class="fa fa-plus" aria-hidden="true"></i> More Categories';
+
+
+		if ($(this).html() == htmlBefore) {
+			$(this).html(htmlAfter);
+		} else {
+			$(this).html(htmlBefore);
+		}
+	});
  
     /*---Newsletter Popup---*/
    
@@ -473,12 +488,20 @@
 
     
 
-    /*---slide toggle---*/
+ 
+    
+    /*---mini cart activation---*/
+   /*---slide toggle---*/
    $('.cart_link > a').on('click', function(event){
-        if($(window).width() < 991){
-            $('.mini_cart').slideToggle('medium');
-        }
+    if($(window).width() < 991){
+        $('.mini_cart').slideToggle('medium');
+    }
+});
+
+    $('.mini_cart_close > a,.off_canvars_overlay').on('click', function(){
+        $('.mini_cart,.off_canvars_overlay').removeClass('active')
     });
+    
     
     
      /*---canvas menu activation---*/
@@ -525,4 +548,51 @@
 	});
 
  
+ 
+
+    $('#instagramFeed').on("DOMNodeInserted", function (e) {
+        if (e.target.className == 'instagram_gallery') {
+            $("." + e.target.className).slick({
+                slidesToShow: 6,
+                
+                arrows: false,
+                 responsive: [
+                     {
+                      breakpoint: 1200,
+                      settings: {
+                        slidesToShow: 5
+                      }
+                    },
+                    {
+                      breakpoint: 992,
+                      settings: {
+                        slidesToShow: 4
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 3
+                      }
+                    },
+                     {
+                      breakpoint: 576,
+                      settings: {
+                        slidesToShow: 2
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1
+                      }
+                    }
+                ]
+            })
+        }
+    });
+    
+    
+    
+    
 })(jQuery);	
