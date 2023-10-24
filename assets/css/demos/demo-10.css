@@ -39,7 +39,7 @@
 
 .header.header-8 .header-top a:hover,
 .header.header-8 .header-top a:focus {
-  color: #445f84;
+  color: #E07000;
 }
 
 .header.header-8 .header-middle .container::after,
@@ -98,7 +98,8 @@
 .intro-slider-container,
 .intro-slide,
 .banner {
-  background-color: #e6e6e6;
+  border-radius: 20px;
+  background-color: transparent;
 }
 
 .intro-slider-container:before,
@@ -306,7 +307,7 @@
 
 .product.product-3 .product-title:hover a,
 .product.product-3 .product-title:focus a {
-  box-shadow: 0 1px 0 #445f84;
+  box-shadow: 0 1px 0 #E07000;
 }
 
 .product.product-3 .product-price {
@@ -357,7 +358,7 @@
 }
 
 .product.product-3 .btn-product:not(:hover):not(:focus) span {
-  color: #445f84;
+  color: #E07000;
 }
 
 .product.product-3 .btn-product+.btn-product {
@@ -375,7 +376,7 @@
 
 .product-countdown-container .product-countdown .countdown-amount {
   text-transform: capitalize;
-  color         : #445f84;
+  color         : #E07000;
 }
 
 .products .row {
