@@ -14,7 +14,7 @@
     .header .header-top .social-icons a {
       color: #999; }
       .header .header-top .social-icons a:hover {
-        color: #c96; }
+        color: #E07000; }
       .header .header-top .social-icons a i {
         margin: 0;
         font-size: 1.4rem; }
@@ -34,7 +34,7 @@
   .header .header-search-wrapper .btn-primary {
     padding-left: 0; }
     .header .header-search-wrapper .btn-primary:hover, .header .header-search-wrapper .btn-primary:focus, .header .header-search-wrapper .btn-primary:not(:disabled):not(.disabled):active {
-      color: #c96; }
+      color: #E07000; }
     .header .header-search-wrapper .btn-primary i {
       -ms-transform: translateX(-50%); }
   .header .header-search-wrapper .form-control {
@@ -89,9 +89,9 @@
     .header .header-bottom .menu > li > a::after {
       right: 1.1rem; }
     .header .header-bottom .menu > li > a:hover {
-      color: #c96; }
+      color: #E07000; }
   .header .header-bottom .menu .active .sf-with-ul {
-    color: #c96; }
+    color: #E07000; }
   .header .header-bottom .menu li + li {
     margin-left: .95rem; }
   .header .header-bottom .menu ul li + li {
@@ -144,9 +144,9 @@
     color: #fff; }
 .header-middle .dropdown-cart-action .btn-outline-primary-2 {
   padding: 1rem;
-  color: #c96; }
+  color: #E07000; }
   .header-middle .dropdown-cart-action .btn-outline-primary-2:hover {
-    border-color: #c96; }
+    border-color: #E07000; }
 
 p {
   color: #999; }
@@ -427,7 +427,7 @@ p {
     .heading .title-link i {
       margin-left: .2rem; }
     .heading .title-link:hover, .heading .title-link:active, .heading .title-link:focus {
-      color: #c96;
+      color: #E07000;
       outline: none; }
 
 hr {
@@ -497,8 +497,8 @@ hr {
     .more-container .btn-more span {
       color: #333333; }
     .more-container .btn-more:hover, .more-container .btn-more:focus, .more-container .btn-more:not(:disabled):not(.disabled):active {
-      background: #c96;
-      border-color: #c96; }
+      background: #E07000;
+      border-color: #E07000; }
       .more-container .btn-more:hover span, .more-container .btn-more:focus span, .more-container .btn-more:not(:disabled):not(.disabled):active span {
         color: #fff; }
 
@@ -548,7 +548,7 @@ hr {
   content: '\f005' '\f005' '\f005' '\f005' '\f005';
   font-weight: 600;
   letter-spacing: .31em;
-  color: #c96; }
+  color: #E07000; }
 
 .ratings::before {
   font-weight: 400; }
@@ -760,6 +760,6 @@ hr {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #c96; }
+  background-color: #E07000; }
 
 /*# sourceMappingURL=demo-29.css.map */

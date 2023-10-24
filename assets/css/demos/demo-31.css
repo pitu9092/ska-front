@@ -195,7 +195,7 @@ body {
 .btn-product-icon {
   font-family: 'Font Awesome 5 Free';
   color: #fff;
-  background-color: #c96; }
+  background-color: #E07000; }
   .btn-product-icon span {
     font-family: "Roboto", sans-serif; }
 
@@ -204,7 +204,7 @@ body {
   .owl-products .product-action .btn-product {
     padding: 1.05rem 0;
     color: #fff;
-    background-color: #c96;
+    background-color: #E07000;
     border: none; }
     .owl-products .product-action .btn-product span {
       margin-bottom: -.3rem;
@@ -416,7 +416,7 @@ body {
       border-color: #fff; }
   .newsletter .input-group .btn {
     min-width: 11.7rem;
-    color: #c96; }
+    color: #E07000; }
     .newsletter .input-group .btn:hover, .newsletter .input-group .btn:focus {
       color: #fff; }
 

@@ -97,7 +97,7 @@ figure {
       .women-section .owl-nav .owl-next:not(.disabled):hover,
       .men-section .owl-nav .owl-prev:not(.disabled):hover,
       .men-section .owl-nav .owl-next:not(.disabled):hover {
-        background: #c96;
+        background: #E07000;
         color: #fff; }
     .women-section .owl-nav .owl-next,
     .men-section .owl-nav .owl-next {
@@ -148,13 +148,13 @@ figure {
   color: #fff;
   transition: color .35s, background-color .35s; }
   .hotspot.active {
-    background: #c96; }
+    background: #E07000; }
 
 .hotspot-wrapper {
   position: absolute; }
   .hotspot-wrapper:hover .hotspot, .hotspot-wrapper:active .hotspot, .hotspot-wrapper:focus .hotspot {
     color: #fff;
-    background: #c96; }
+    background: #E07000; }
   .hotspot-wrapper:hover .tooltip, .hotspot-wrapper:active .tooltip, .hotspot-wrapper:focus .tooltip {
     opacity: 1;
     z-index: 1; }
@@ -187,7 +187,7 @@ figure {
     letter-spacing: .005em;
     transition: color .35s; }
     .tooltip .product-title:hover {
-      color: #c96; }
+      color: #E07000; }
   .tooltip .product-price {
     justify-content: center;
     margin-bottom: 0;
@@ -244,7 +244,7 @@ figure {
   font-size: 8em; }
 .video-banner .btn-video {
   color: #fff;
-  background: #c96;
+  background: #E07000;
   box-shadow: 0 0 0 1.5rem rgba(204, 153, 102, 0.4); }
   .video-banner .btn-video:hover, .video-banner .btn-video:focus, .video-banner .btn-video:active {
     box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.2);
@@ -301,7 +301,7 @@ figure {
 
 .product-label.label-sale {
   padding: .5rem .7rem;
-  background-color: #c96; }
+  background-color: #E07000; }
 
 .product-action {
   top: -4rem;
@@ -332,7 +332,7 @@ figure {
     letter-spacing: .1em;
     color: #333333; }
   .product-27 .btn-product:hover {
-    background-color: #c96;
+    background-color: #E07000;
     color: #fff; }
     .product-27 .btn-product:hover span {
       color: #fff;
@@ -411,7 +411,7 @@ figure {
 .newsletter .btn-white {
   min-width: 11.7rem;
   border: none;
-  color: #c96; }
+  color: #E07000; }
   .newsletter .btn-white:hover, .newsletter .btn-white:focus, .newsletter .btn-white:active {
     color: #fff; }
 
@@ -512,8 +512,8 @@ figure {
         display: none; }
   .section-scroll-nav .active a {
     height: 2rem;
-    background-color: #c96;
-    border-color: #c96;
+    background-color: #E07000;
+    border-color: #E07000;
     border-radius: 5px; }
 
 @media screen and (max-width: 991px) {
