@@ -10373,11 +10373,7 @@ a:focus {
 }
 
 /*--------------------- 4.2.BreadCrumbs -------------------- */
-/* Breadcrumb */
-.breadcrumb-nav {
-  margin-bottom: 4rem;
-  border-bottom: 0.1rem solid rgba(235, 235, 235, 0.55);
-}
+
 
 .breadcrumb-nav .container,
 .breadcrumb-nav .container-fluid {
@@ -25036,4 +25032,9 @@ font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 24px; /* 150% */
+}
+.wishlist-product .product
+{
+  border: 1px solid var(--Box-Border, #E0E0E0);
+  background: var(--Pure, #FFF);
 }
