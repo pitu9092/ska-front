@@ -895,6 +895,12 @@ blockquote.text-white cite span {
   padding-right: 1.5rem;
 }
 
+.sf-with-ul-megamenu-height
+{
+  height: 135px !important;
+  line-height: 126px !important;
+}
+
 .cart-dropdown,
 .compare-dropdown {
   display    : flex;
@@ -1445,9 +1451,11 @@ blockquote.text-white cite span {
 }
 
 .menu .megamenu.demo {
-  height    : 65vh;
+  height    : 51vh;
   overflow-x: hidden;
   overflow-y: scroll;
+  background: #F5F5F5;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
 }
 
 .menu .megamenu.demo::-webkit-scrollbar {
@@ -1998,7 +2006,7 @@ blockquote.text-white cite span {
 
 .menu ul,
 .menu .megamenu {
-  margin-top: 1px;
+  margin-top: -10px;
 }
 
 .menu ul:before,
@@ -2140,6 +2148,84 @@ blockquote.text-white cite span {
   font-size     : 1.4rem;
   text-transform: uppercase;
   margin-bottom : .6rem;
+  
+}
+.catogrey-main-left .menu-title
+{
+  color: #FFF ;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.catogrey-main-left
+{
+  min-height: 435px;
+  background: var(--Secondary-Color, #333);
+}
+.catogrey-main-right
+{
+  min-height: 435px;
+  padding: 20px 10px;
+  background: var(--Secondary-Color, #fff);
+}
+.catogrey-main-right .menu-title a
+{
+  color: var(--Secondary-Color, #333);
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.catogrey-main-right .menu-title a:hover
+{
+  color: #E07000;
+}
+
+
+.catogrey-main-left ul li a
+{
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  text-transform: capitalize;
+}
+.catogrey-main-left ul li a:hover
+{
+  color: #E07000;
+}
+.catogrey-main-left ul
+{
+  height:100%;
+  background: var(--Secondary-Color, #333);
+}
+.catogrey-main-left ul li
+{
+  display: flex;
+  width: 100%;
+  padding: 15px 0px 0px 20px;
+  align-items: center;
+}
+.catogrey-main-right .category-menu ul li a
+{
+  color: var(--Sub-Details, #666);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.catogrey-main-right .category-menu ul li a:hover
+{
+  color: #E07000;
 }
 
 .menu .megamenu-action {
@@ -10890,6 +10976,8 @@ a:focus {
 
 .tab-pane p:last-child {
   margin-bottom: 0;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 14px;
 }
 
 /* Nav Pills - Line Tabs */
@@ -25043,4 +25131,32 @@ line-height: 24px; /* 150% */
   color: #000;
   font-family: 'Open Sans';
   font-weight: 500;
+}
+/* font-family: 'Poppins', sans-serif; */
+.sticky-header.fixed.header-middle .menu>li>a {
+  padding-top: 4rem;
+  padding-bottom: 3.1rem;
+  line-height: 0px !important;
+  height: 70px !important;
+}
+
+.sticky-header.fixed.header-middle .menu>li>a:after {
+  top: 58%;
+}
+/* *********************** Mobile Css ********************* */
+@media(min-width: 280px) and (max-width: 992px)
+{}
+
+/* *********************** Laptop Css ********************* */
+@media(min-width:993px) and (max-width:1777px)
+{
+  .menu .megamenu.demo {
+    height    : 65vh;
+  }
+}
+
+/* *********************** iPad Pro Css ******************* */
+@media(min-width:1400px) and (max-width:1920px)
+{
+
 }

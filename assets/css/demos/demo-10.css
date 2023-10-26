@@ -4,12 +4,14 @@
 
 /* font-family: 'Poppins', sans-serif; */
 .sticky-header.fixed.header-middle .menu>li>a {
-  padding-top   : 4rem;
+  padding-top: 4rem;
   padding-bottom: 3.1rem;
+  line-height: 0px !important;
+  height: 70px !important;
 }
 
 .sticky-header.fixed.header-middle .menu>li>a:after {
-  top: 55%;
+  top: 58%;
 }
 
 .header.header-8 .logo {
