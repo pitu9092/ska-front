@@ -25,1608 +25,986 @@
     </head>
 
     <body>
-        <div class="page-wrapper">
-            <header class="header header-2 header-intro-clearance">
-                <div class="header-middle sticky-header">
+        <!DOCTYPE html>
+
+
+        <html lang="en" data-bs-theme="light">
+        
+        
+        <head>
+            <!--required meta tags-->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="csrf-token" content="LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze">
+        
+            <!--favicon icon-->
+            <link rel="icon" href="https://localhost/ska_web/public/frontend/default/assets/img/favicon.png?v=v2.7.0"
+                type="image/png" sizes="16x16">
+        
+            <!--title-->
+            <title>
+                Login
+            </title>
+        
+            <!--build:css-->
+            <!-- 3rd party -->
+            <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/common/css/toastr.css?v=v2.7.0">
+            <!-- 3rd party -->
+        
+        
+            <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/common/css/select2.css?v=v2.7.0">
+            <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/common/css/custom.css?v=v2.7.0">
+        
+            <!-- <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/assets/css/bootstrap.min.css?v=v2.7.0"> -->
+            <link rel="stylesheet"
+                href="https://localhost/ska_web/public/frontend/assets/css/plugins/jquery.countdown.css?v=v2.7.0">
+            <link rel="stylesheet"
+                href="https://localhost/ska_web/public/frontend/assets/css/plugins/magnific-popup/magnific-popup.css?v=v2.7.0">
+            <link rel="stylesheet"
+                href="https://localhost/ska_web/public/frontend/assets/css/plugins/nouislider/nouislider.css?v=v2.7.0">
+            <link rel="stylesheet"
+                href="https://localhost/ska_web/public/frontend/assets/css/plugins/owl-carousel/owl.carousel.css?v=v2.7.0">
+            <link rel="stylesheet"
+                href="https://localhost/ska_web/public/frontend/assets/css/plugins/jquery.countdown.css?v=v2.7.0">
+        
+            <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/assets/css/style.css?v=v2.7.0">
+            <!-- <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/assets/css/skins/skin-demo-10.css?v=v2.7.0">
+        <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/assets/css/demos/demo-10.css?v=v2.7.0"> -->
+        
+            <link rel="stylesheet" href="https://localhost/ska_web/public/frontend/default/assets/css/main.css?v=v2.7.0">
+            <!-- endbuild -->
+        
+            <!-- recaptcha -->
+            <!-- recaptcha -->
+        
+            <link rel='stylesheet' type='text/css' property='stylesheet'
+                href='//localhost/ska_web/_debugbar/assets/stylesheets?v=1700726464&theme=auto' data-turbolinks-eval='false'
+                data-turbo-eval='false'>
+            <script src='//localhost/ska_web/_debugbar/assets/javascript?v=1700726464' data-turbolinks-eval='false'
+                data-turbo-eval='false'></script>
+            <script data-turbo-eval="false">
+                jQuery.noConflict(true);
+            </script>
+            <script>
+                Sfdump = window.Sfdump || (function (doc) { var refStyle = doc.createElement('style'), rxEsc = /([.*+?^${}()|\[\]\/\\])/g, idRx = /\bsf-dump-\d+-ref[012]\w+\b/, keyHint = 0 <= navigator.platform.toUpperCase().indexOf('MAC') ? 'Cmd' : 'Ctrl', addEventListener = function (e, n, cb) { e.addEventListener(n, cb, false); }; refStyle.innerHTML = '.phpdebugbar pre.sf-dump .sf-dump-compact, .sf-dump-str-collapse .sf-dump-str-collapse, .sf-dump-str-expand .sf-dump-str-expand { display: none; }'; doc.head.appendChild(refStyle); refStyle = doc.createElement('style'); doc.head.appendChild(refStyle); if (!doc.addEventListener) { addEventListener = function (element, eventName, callback) { element.attachEvent('on' + eventName, function (e) { e.preventDefault = function () {e.returnValue = false;}; e.target = e.srcElement; callback(e); }); }; } function toggle(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className, arrow, newClass; if (/\bsf-dump-compact\b/.test(oldClass)) { arrow = '▼'; newClass = 'sf-dump-expanded'; } else if (/\bsf-dump-expanded\b/.test(oldClass)) { arrow = '▶'; newClass = 'sf-dump-compact'; } else { return false; } if (doc.createEvent && s.dispatchEvent) { var event = doc.createEvent('Event'); event.initEvent('sf-dump-expanded' === newClass ? 'sfbeforedumpexpand' : 'sfbeforedumpcollapse', true, false); s.dispatchEvent(event); } a.lastChild.innerHTML = arrow; s.className = s.className.replace(/\bsf-dump-(compact|expanded)\b/, newClass); if (recursive) { try { a = s.querySelectorAll('.'+oldClass); for (s = 0; s < a.length; ++s) { if (-1 == a[s].className.indexOf(newClass)) { a[s].className = newClass; a[s].previousSibling.lastChild.innerHTML = arrow; } } } catch (e) { } } return true; }; function collapse(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className; if (/\bsf-dump-expanded\b/.test(oldClass)) { toggle(a, recursive); return true; } return false; }; function expand(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className; if (/\bsf-dump-compact\b/.test(oldClass)) { toggle(a, recursive); return true; } return false; }; function collapseAll(root) { var a = root.querySelector('a.sf-dump-toggle'); if (a) { collapse(a, true); expand(a); return true; } return false; } function reveal(node) { var previous, parents = []; while ((node = node.parentNode || {}) && (previous = node.previousSibling) && 'A' === previous.tagName) { parents.push(previous); } if (0 !== parents.length) { parents.forEach(function (parent) { expand(parent); }); return true; } return false; } function highlight(root, activeNode, nodes) { resetHighlightedNodes(root); Array.from(nodes||[]).forEach(function (node) { if (!/\bsf-dump-highlight\b/.test(node.className)) { node.className = node.className + ' sf-dump-highlight'; } }); if (!/\bsf-dump-highlight-active\b/.test(activeNode.className)) { activeNode.className = activeNode.className + ' sf-dump-highlight-active'; } } function resetHighlightedNodes(root) { Array.from(root.querySelectorAll('.sf-dump-str, .sf-dump-key, .sf-dump-public, .sf-dump-protected, .sf-dump-private')).forEach(function (strNode) { strNode.className = strNode.className.replace(/\bsf-dump-highlight\b/, ''); strNode.className = strNode.className.replace(/\bsf-dump-highlight-active\b/, ''); }); } return function (root, x) { root = doc.getElementById(root); var indentRx = new RegExp('^('+(root.getAttribute('data-indent-pad') || ' ').replace(rxEsc, '\\$1')+')+', 'm'), options = {"maxDepth":1,"maxStringLength":160,"fileLinkFormat":false}, elt = root.getElementsByTagName('A'), len = elt.length, i = 0, s, h, t = []; while (i < len) t.push(elt[i++]); for (i in x) { options[i] = x[i]; } function a(e, f) { addEventListener(root, e, function (e, n) { if ('A' == e.target.tagName) { f(e.target, e); } else if ('A' == e.target.parentNode.tagName) { f(e.target.parentNode, e); } else { n = /\bsf-dump-ellipsis\b/.test(e.target.className) ? e.target.parentNode : e.target; if ((n = n.nextElementSibling) && 'A' == n.tagName) { if (!/\bsf-dump-toggle\b/.test(n.className)) { n = n.nextElementSibling || n; } f(n, e, true); } } }); }; function isCtrlKey(e) { return e.ctrlKey || e.metaKey; } function xpathString(str) { var parts = str.match(/[^'"]+|['"]/g).map(function (part) { if ("'" == part) { return '"\'"'; } if ('"' == part) { return "'\"'"; } return "'" + part + "'"; }); return "concat(" + parts.join(",") + ", '')"; } function xpathHasClass(className) { return "contains(concat(' ', normalize-space(@class), ' '), ' " + className +" ')"; } addEventListener(root, 'mouseover', function (e) { if ('' != refStyle.innerHTML) { refStyle.innerHTML = ''; } }); a('mouseover', function (a, e, c) { if (c) { e.target.style.cursor = "pointer"; } else if (a = idRx.exec(a.className)) { try { refStyle.innerHTML = '.phpdebugbar pre.sf-dump .'+a[0]+'{background-color: #B729D9; color: #FFF !important; border-radius: 2px}'; } catch (e) { } } }); a('click', function (a, e, c) { if (/\bsf-dump-toggle\b/.test(a.className)) { e.preventDefault(); if (!toggle(a, isCtrlKey(e))) { var r = doc.getElementById(a.getAttribute('href').slice(1)), s = r.previousSibling, f = r.parentNode, t = a.parentNode; t.replaceChild(r, a); f.replaceChild(a, s); t.insertBefore(s, r); f = f.firstChild.nodeValue.match(indentRx); t = t.firstChild.nodeValue.match(indentRx); if (f && t && f[0] !== t[0]) { r.innerHTML = r.innerHTML.replace(new RegExp('^'+f[0].replace(rxEsc, '\\$1'), 'mg'), t[0]); } if (/\bsf-dump-compact\b/.test(r.className)) { toggle(s, isCtrlKey(e)); } } if (c) { } else if (doc.getSelection) { try { doc.getSelection().removeAllRanges(); } catch (e) { doc.getSelection().empty(); } } else { doc.selection.empty(); } } else if (/\bsf-dump-str-toggle\b/.test(a.className)) { e.preventDefault(); e = a.parentNode.parentNode; e.className = e.className.replace(/\bsf-dump-str-(expand|collapse)\b/, a.parentNode.className); } }); elt = root.getElementsByTagName('SAMP'); len = elt.length; i = 0; while (i < len) t.push(elt[i++]); len = t.length; for (i = 0; i < len; ++i) { elt = t[i]; if ('SAMP' == elt.tagName) { a = elt.previousSibling || {}; if ('A' != a.tagName) { a = doc.createElement('A'); a.className = 'sf-dump-ref'; elt.parentNode.insertBefore(a, elt); } else { a.innerHTML += ' '; } a.title = (a.title ? a.title+'\n[' : '[')+keyHint+'+click] Expand all children'; a.innerHTML += elt.className == 'sf-dump-compact' ? '<span>▶</span>' : '<span>▼</span>'; a.className += ' sf-dump-toggle'; x = 1; if ('sf-dump' != elt.parentNode.className) { x += elt.parentNode.getAttribute('data-depth')/1; } } else if (/\bsf-dump-ref\b/.test(elt.className) && (a = elt.getAttribute('href'))) { a = a.slice(1); elt.className += ' '+a; if (/[\[{]$/.test(elt.previousSibling.nodeValue)) { a = a != elt.nextSibling.id && doc.getElementById(a); try { s = a.nextSibling; elt.appendChild(a); s.parentNode.insertBefore(a, s); if (/^[@#]/.test(elt.innerHTML)) { elt.innerHTML += ' <span>▶</span>'; } else { elt.innerHTML = '<span>▶</span>'; elt.className = 'sf-dump-ref'; } elt.className += ' sf-dump-toggle'; } catch (e) { if ('&' == elt.innerHTML.charAt(0)) { elt.innerHTML = '…'; elt.className = 'sf-dump-ref'; } } } } } if (doc.evaluate && Array.from && root.children.length > 1) { root.setAttribute('tabindex', 0); SearchState = function () { this.nodes = []; this.idx = 0; }; SearchState.prototype = { next: function () { if (this.isEmpty()) { return this.current(); } this.idx = this.idx < (this.nodes.length - 1) ? this.idx + 1 : 0; return this.current(); }, previous: function () { if (this.isEmpty()) { return this.current(); } this.idx = this.idx > 0 ? this.idx - 1 : (this.nodes.length - 1); return this.current(); }, isEmpty: function () { return 0 === this.count(); }, current: function () { if (this.isEmpty()) { return null; } return this.nodes[this.idx]; }, reset: function () { this.nodes = []; this.idx = 0; }, count: function () { return this.nodes.length; }, }; function showCurrent(state) { var currentNode = state.current(), currentRect, searchRect; if (currentNode) { reveal(currentNode); highlight(root, currentNode, state.nodes); if ('scrollIntoView' in currentNode) { currentNode.scrollIntoView(true); currentRect = currentNode.getBoundingClientRect(); searchRect = search.getBoundingClientRect(); if (currentRect.top < (searchRect.top + searchRect.height)) { window.scrollBy(0, -(searchRect.top + searchRect.height + 5)); } } } counter.textContent = (state.isEmpty() ? 0 : state.idx + 1) + ' of ' + state.count(); } var search = doc.createElement('div'); search.className = 'sf-dump-search-wrapper sf-dump-search-hidden'; search.innerHTML = ' <input type="text" class="sf-dump-search-input"> <span class="sf-dump-search-count">0 of 0<\/span> <button type="button" class="sf-dump-search-input-previous" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 1331l-166 165q-19 19-45 19t-45-19L896 965l-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> <button type="button" class="sf-dump-search-input-next" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 808l-742 741q-19 19-45 19t-45-19L109 808q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> '; root.insertBefore(search, root.firstChild); var state = new SearchState(); var searchInput = search.querySelector('.sf-dump-search-input'); var counter = search.querySelector('.sf-dump-search-count'); var searchInputTimer = 0; var previousSearchQuery = ''; addEventListener(searchInput, 'keyup', function (e) { var searchQuery = e.target.value; /* Don't perform anything if the pressed key didn't change the query */ if (searchQuery === previousSearchQuery) { return; } previousSearchQuery = searchQuery; clearTimeout(searchInputTimer); searchInputTimer = setTimeout(function () { state.reset(); collapseAll(root); resetHighlightedNodes(root); if ('' === searchQuery) { counter.textContent = '0 of 0'; return; } var classMatches = [ "sf-dump-str", "sf-dump-key", "sf-dump-public", "sf-dump-protected", "sf-dump-private", ].map(xpathHasClass).join(' or '); var xpathResult = doc.evaluate('.//span[' + classMatches + '][contains(translate(child::text(), ' + xpathString(searchQuery.toUpperCase()) + ', ' + xpathString(searchQuery.toLowerCase()) + '), ' + xpathString(searchQuery.toLowerCase()) + ')]', root, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null); while (node = xpathResult.iterateNext()) state.nodes.push(node); showCurrent(state); }, 400); }); Array.from(search.querySelectorAll('.sf-dump-search-input-next, .sf-dump-search-input-previous')).forEach(function (btn) { addEventListener(btn, 'click', function (e) { e.preventDefault(); -1 !== e.target.className.indexOf('next') ? state.next() : state.previous(); searchInput.focus(); collapseAll(root); showCurrent(state); }) }); addEventListener(root, 'keydown', function (e) { var isSearchActive = !/\bsf-dump-search-hidden\b/.test(search.className); if ((114 === e.keyCode && !isSearchActive) || (isCtrlKey(e) && 70 === e.keyCode)) { /* F3 or CMD/CTRL + F */ if (70 === e.keyCode && document.activeElement === searchInput) { /* * If CMD/CTRL + F is hit while having focus on search input, * the user probably meant to trigger browser search instead. * Let the browser execute its behavior: */ return; } e.preventDefault(); search.className = search.className.replace(/\bsf-dump-search-hidden\b/, ''); searchInput.focus(); } else if (isSearchActive) { if (27 === e.keyCode) { /* ESC key */ search.className += ' sf-dump-search-hidden'; e.preventDefault(); resetHighlightedNodes(root); searchInput.value = ''; } else if ( (isCtrlKey(e) && 71 === e.keyCode) /* CMD/CTRL + G */ || 13 === e.keyCode /* Enter */ || 114 === e.keyCode /* F3 */ ) { e.preventDefault(); e.shiftKey ? state.previous() : state.next(); collapseAll(root); showCurrent(state); } } }); } if (0 >= options.maxStringLength) { return; } try { elt = root.querySelectorAll('.sf-dump-str'); len = elt.length; i = 0; t = []; while (i < len) t.push(elt[i++]); len = t.length; for (i = 0; i < len; ++i) { elt = t[i]; s = elt.innerText || elt.textContent; x = s.length - options.maxStringLength; if (0 < x) { h = elt.innerHTML; elt[elt.innerText ? 'innerText' : 'textContent'] = s.substring(0, options.maxStringLength); elt.className += ' sf-dump-str-collapse'; elt.innerHTML = '<span class=sf-dump-str-collapse>'+h+'<a class="sf-dump-ref sf-dump-str-toggle" title="Collapse"> ◀</a></span>'+ '<span class=sf-dump-str-expand>'+elt.innerHTML+'<a class="sf-dump-ref sf-dump-str-toggle" title="'+x+' remaining characters"> ▶</a></span>'; } } } catch (e) { } }; })(document); 
+            </script>
+            <style>
+                .phpdebugbar pre.sf-dump {
+                    display: block;
+                    white-space: pre;
+                    padding: 5px;
+                    overflow: initial !important;
+                }
+        
+                .phpdebugbar pre.sf-dump:after {
+                    content: "";
+                    visibility: hidden;
+                    display: block;
+                    height: 0;
+                    clear: both;
+                }
+        
+                .phpdebugbar pre.sf-dump span {
+                    display: inline;
+                }
+        
+                .phpdebugbar pre.sf-dump a {
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: 0;
+                    outline: none;
+                    color: inherit;
+                }
+        
+                .phpdebugbar pre.sf-dump img {
+                    max-width: 50em;
+                    max-height: 50em;
+                    margin: .5em 0 0 0;
+                    padding: 0;
+                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAHUlEQVQY02O8zAABilCaiQEN0EeA8QuUcX9g3QEAAjcC5piyhyEAAAAASUVORK5CYII=) #D3D3D3;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-ellipsis {
+                    display: inline-block;
+                    overflow: visible;
+                    text-overflow: ellipsis;
+                    max-width: 5em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    vertical-align: top;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-ellipsis+.sf-dump-ellipsis {
+                    max-width: none;
+                }
+        
+                .phpdebugbar pre.sf-dump code {
+                    display: inline;
+                    padding: 0;
+                    background: none;
+                }
+        
+                .sf-dump-public.sf-dump-highlight,
+                .sf-dump-protected.sf-dump-highlight,
+                .sf-dump-private.sf-dump-highlight,
+                .sf-dump-str.sf-dump-highlight,
+                .sf-dump-key.sf-dump-highlight {
+                    background: rgba(111, 172, 204, 0.3);
+                    border: 1px solid #7DA0B1;
+                    border-radius: 3px;
+                }
+        
+                .sf-dump-public.sf-dump-highlight-active,
+                .sf-dump-protected.sf-dump-highlight-active,
+                .sf-dump-private.sf-dump-highlight-active,
+                .sf-dump-str.sf-dump-highlight-active,
+                .sf-dump-key.sf-dump-highlight-active {
+                    background: rgba(253, 175, 0, 0.4);
+                    border: 1px solid #ffa500;
+                    border-radius: 3px;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-hidden {
+                    display: none !important;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper {
+                    font-size: 0;
+                    white-space: nowrap;
+                    margin-bottom: 5px;
+                    display: flex;
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 5px;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>* {
+                    vertical-align: top;
+                    box-sizing: border-box;
+                    height: 21px;
+                    font-weight: normal;
+                    border-radius: 0;
+                    background: #FFF;
+                    color: #757575;
+                    border: 1px solid #BBB;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>input.sf-dump-search-input {
+                    padding: 3px;
+                    height: 21px;
+                    font-size: 12px;
+                    border-right: none;
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                    color: #000;
+                    min-width: 15px;
+                    width: 100%;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>.sf-dump-search-input-next,
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>.sf-dump-search-input-previous {
+                    background: #F2F2F2;
+                    outline: none;
+                    border-left: none;
+                    font-size: 0;
+                    line-height: 0;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>.sf-dump-search-input-next {
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>.sf-dump-search-input-next>svg,
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>.sf-dump-search-input-previous>svg {
+                    pointer-events: none;
+                    width: 12px;
+                    height: 12px;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-search-wrapper>.sf-dump-search-count {
+                    display: inline-block;
+                    padding: 0 5px;
+                    margin: 0;
+                    border-left: none;
+                    line-height: 21px;
+                    font-size: 12px;
+                }
+        
+                .phpdebugbar pre.sf-dump,
+                .phpdebugbar pre.sf-dump .sf-dump-default {
+                    word-wrap: break-word;
+                    white-space: pre-wrap;
+                    word-break: normal
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-num {
+                    font-weight: bold;
+                    color: #1299DA
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-const {
+                    font-weight: bold
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-str {
+                    font-weight: bold;
+                    color: #3A9B26
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-note {
+                    color: #1299DA
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-ref {
+                    color: #7B7B7B
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-public {
+                    color: #000000
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-protected {
+                    color: #000000
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-private {
+                    color: #000000
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-meta {
+                    color: #B729D9
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-key {
+                    color: #3A9B26
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-index {
+                    color: #1299DA
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-ellipsis {
+                    color: #A0A000
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-ns {
+                    user-select: none;
+                }
+        
+                .phpdebugbar pre.sf-dump .sf-dump-ellipsis-note {
+                    color: #1299DA
+                }
+            </style>
+        </head>
+        
+        <body>
+        
+            <!--preloader start-->
+            <div id="preloader">
+                <div id="status"></div>
+            </div>
+            <!--preloader end-->
+        
+            <!--main content wrapper start-->
+            <div class="main-wrapper">
+        
+                <section class="login-section py-5">
                     <div class="container">
-                        <div class="header-left">
-                            <button class="mobile-menu-toggler">
-                                <span class="sr-only">Toggle mobile menu</span>
-                                <i class="icon-bars"></i>
-                            </button>
-
-                            <a href="index.html" class="logo">
-                                <img src="assets/images/logo.png" alt="Logo"
-                                    width="104" class="width-logo-sm"
-                                    height="25">
-                            </a>
-
-                            <nav class="main-nav">
-                                <ul class="menu sf-arrows">
-                                    <li>
-                                        <a href="category.html">Hot Deals</a>
-                                    </li>
-                                    <li>
-                                        <a href="category.html">Prime Offers</a>
-                                    </li>
-                                    <li>
-                                        <a href="category.html">Snacks</a>
-                                    </li>
-                                    <li>
-                                        <a href="category.html">Beauty Hygiene</a>
-                                    </li>
-                                    <li class="megamenu-container ">
-                                        <a href="index.html"
-                                            class="sf-with-ul sf-with-ul-megamenu-height">All
-                                            Caregory</a>
-                                        <div class="megamenu demo">
-                                            <div class="row no-gutters">
-                                                <div class="col-md-12">
-                                                    <div class="menu-col">
-                                                        <div class="row">
-                                                            <div
-                                                                class="col-md-3">
-                                                                <div
-                                                                    class="catogrey-main-left">
-                                                                    <ul>
-                                                                        <li><a
-                                                                                href="category.html">Foodgrains,
-                                                                                Oil
-                                                                                &
-                                                                                Masala</a></li>
-                                                                        <li><a
-                                                                                href="category.html">Bakery,
-                                                                                Cakes
-                                                                                &
-                                                                                Dairy</a></li>
-                                                                        <li><a
-                                                                                href="category.html">Baverages</a></li>
-                                                                        <li><a
-                                                                                href="category.html">Snacks
-                                                                                &
-                                                                                Branded
-                                                                                Foods</a></li>
-                                                                        <li><a
-                                                                                href="category.html">Beauty
-                                                                                Hygiene</a></li>
-                                                                        <li><a
-                                                                                href="category.html">Cleaning
-                                                                                &
-                                                                                Household</a>
-                                                                        </li>
-                                                                        <li><a
-                                                                                href="category.html">Baby
-                                                                                Care</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div
-                                                                class="col-md-9">
-                                                                <div
-                                                                    class="row catogrey-main-right">
-                                                                    <div
-                                                                        class="col-md-4">
-                                                                        <div
-                                                                            class="category-menu">
-                                                                            <div
-                                                                                class="menu-title"><a
-                                                                                    href="category.html">Coffee</a></div>
-                                                                            <ul>
-                                                                                <li><a
-                                                                                        href="product.html">Ground
-                                                                                        Coffee</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Instant
-                                                                                        Coffee</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col-md-4">
-                                                                        <div
-                                                                            class="category-menu">
-                                                                            <div
-                                                                                class="menu-title"><a
-                                                                                    href="category.html">
-                                                                                    Energy
-                                                                                    &
-                                                                                    Soft
-                                                                                    Drinks</a></div>
-                                                                            <ul>
-                                                                                <li><a
-                                                                                        href="product.html">Cold
-                                                                                        Drinks</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Icetea,
-                                                                                        Non
-                                                                                        Aerated
-                                                                                        Drink</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Non
-                                                                                        Alcoholic
-                                                                                        Drinks</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Soda
-                                                                                        &
-                                                                                        Cocktail
-                                                                                        Mix</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Sports
-                                                                                        &
-                                                                                        Energy
-                                                                                        Drinks</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col-md-4">
-                                                                        <div
-                                                                            class="category-menu">
-                                                                            <div
-                                                                                class="menu-title"><a
-                                                                                    href="category.html">Fruit
-                                                                                    Juice
-                                                                                    &
-                                                                                    Drinks</a></div>
-                                                                            <ul>
-                                                                                <li><a
-                                                                                        href="product.html">Juice</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Syrups
-                                                                                        &
-                                                                                        Concentrates</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Unsweetened,
-                                                                                        Cold
-                                                                                        Press</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col-md-4">
-                                                                        <div
-                                                                            class="category-menu">
-                                                                            <div
-                                                                                class="menu-title"><a
-                                                                                    href="category.html">Tea</a></div>
-                                                                            <ul>
-                                                                                <li><a
-                                                                                        href="product.html">Exotix
-                                                                                        &
-                                                                                        Flavoured
-                                                                                        Tea</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Green
-                                                                                        Tea</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Leaf
-                                                                                        &
-                                                                                        Dust
-                                                                                        Tea</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Tea
-                                                                                        Bags</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col-md-4">
-                                                                        <div
-                                                                            class="category-menu">
-                                                                            <div
-                                                                                class="menu-title"><a
-                                                                                    href="category.html">
-                                                                                    Health
-                                                                                    Drinks,
-                                                                                    Supplement</a></div>
-                                                                            <ul>
-                                                                                <li><a
-                                                                                        href="product.html">Children
-                                                                                        (2-5
-                                                                                        Years)</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Diabetic
-                                                                                        Drinks</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Glucose
-                                                                                        Powder,
-                                                                                        Tablets</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Kids
-                                                                                        (5+
-                                                                                        Years)</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Men
-                                                                                        &
-                                                                                        Women</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col-md-4">
-                                                                        <div
-                                                                            class="category-menu">
-                                                                            <div
-                                                                                class="menu-title"><a
-                                                                                    href="category.html">Water</a></div>
-                                                                            <ul>
-                                                                                <li><a
-                                                                                        href="product.html">Flavoured
-                                                                                        Water</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Packaged
-                                                                                        Water</a></li>
-                                                                                <li><a
-                                                                                        href="product.html">Leaf
-                                                                                        &
-                                                                                        DuSpring
-                                                                                        Waterst
-                                                                                        Tea</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5 col-12 tt-login-img"
+                                data-background="https://localhost/ska_web/public/frontend/default/assets/img/banner/login-banner.jpg?v=v2.7.0">
+                            </div>
+                            <div class="col-lg-5 col-12 bg-white d-flex p-0 tt-login-col shadow">
+                                <form class="tt-login-form-wrap p-3 p-md-6 p-lg-6 py-7 w-100"
+                                    action="https://localhost/ska_web/login" method="POST" id="login-form">
+                                    <input type="hidden" name="_token" value="LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze"> <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-658c208caab4a">
+                                    <script>
+                                        grecaptcha.ready(function() {
+              grecaptcha.execute('', {action: 'recaptcha_token'}).then(function(token) {
+                 document.getElementById('g-recaptcha-response-658c208caab4a').value = token;
+              });
+          });
+                                    </script>
+                                    <div class="mb-2">
+                                        <a href="https://localhost/ska_web">
+                                            <img src="https://localhost/ska_web/public/uploads/media/IkvMDh78qfC4k3yjLphqcMqV8s81qoDLPoeSbv1q.png" width="120" alt="logo">
+                                    </a>
+                                    </div>
+                                    <h2 class="mb-2 h4">Hey there!
+                                        <br>Welcome back to Ska.
+                                </h2>
+        
+                                        <div class="row g-3">
+                                            <div class="col-sm-12">
+                                                <div class="input-field">
+                                                    <input type="hidden" name="login_with" class="login_with" value="email">
+        
+                                                    <span class="login-email ">
+                                                <label class="fw-bold text-dark fs-sm mb-1">Email</label>
+                                                <input type="email" id="email" name="email"
+                                                    placeholder="Enter your email" class="theme-input mb-1"
+                                                    value="" required>
+                                               <!--  <small class="">
+                                                    <a href="javascript:void(0);" class="fs-sm login-with-phone-btn"
+                                                        onclick="handleLoginWithPhone()">
+                                                        Login with phone?</a>
+                                                </small> -->
+                                            </span>
+        
+                                                    <span class="login-phone  d-none ">
+                                                <label class="fw-bold text-dark fs-sm mb-1">Phone</label>
+                                                <input type="text" id="phone" name="phone" placeholder="+xxxxxxxxxx"
+                                                    class="theme-input mb-1" value="">
+        
+                                                <small class="">
+                                                    <a href="javascript:void(0);" class="fs-sm login-with-email-btn"
+                                                        onclick="handleLoginWithEmail()">
+                                                        Login with email?</a>
+                                                </small>
+                                            </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="input-field check-password">
+                                                    <label class="fw-bold text-dark fs-sm mb-1">Password</label>
+                                                    <div class="check-password">
+                                                        <input type="password" name="password" id="password"
+                                                    placeholder="Password" class="theme-input" required>
+                                                        <span class="eye eye-icon"><i class="fa-solid fa-eye"></i></span>
+                                                        <span class="eye eye-slash"><i class="fa-solid fa-eye-slash"></i></span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="header-right">
-                            <div
-                                class="header-search header-search-extended header-search-visible header-search-no-radius d-none d-lg-block">
-                                <a href="#" class="search-toggle" role="button"><i
-                                        class="icon-search"></i></a>
-                                <form action="#" method="get">
-                                    <div
-                                        class="header-search-wrapper search-wrapper-wide">
-                                        <label for="q" class="sr-only">Search</label>
-                                        <input type="search"
-                                            class="form-control" name="q" id="q"
-                                            placeholder="Search product ..."
-                                            required>
-                                        <button class="btn btn-primary"
-                                            type="submit"><i class="icon-search"></i></button>
-                                    </div>
+        
+                                        <div class="d-flex align-items-center justify-content-between mt-4">
+                                            <div class="checkbox d-inline-flex align-items-center gap-2">
+                                                <div class="theme-checkbox flex-shrink-0">
+                                                    <input type="checkbox" id="save-password">
+                                                    <span class="checkbox-field"><i class="fa-solid fa-check"></i></span>
+                                                </div>
+                                                <label for="save-password" class="fs-sm"> Remember me</label>
+                                            </div>
+                                            <a href="https://localhost/ska_web/password/reset" class="fs-sm">Forgot Password</a>
+                                        </div>
+        
+                                        <div class="row g-4 mt-3">
+                                            <div class="col-sm-6">
+                                                <button type="submit" class="btn btn-primary w-100 sign-in-btn"
+                                            onclick="handleSubmit()">Sign In</button>
+                                            </div>
+        
+                                            <div class="col-sm-6">
+                                                <a href="https://localhost/ska_web/register"
+                                                    class="btn btn-primary w-100 sign-in-btn">Sign Up</a>
+                                            </div>
+        
+                                        </div>
+        
+                                        <div class="row g-4 mt-3">
+                                            <!--social login-->
+                                            <!--social login-->
+                                        </div>
                                 </form>
                             </div>
-
-                            <div class="wishlist">
-                                <a href="wishlist.html" title="Wishlist">
-                                    <div class="icon">
-                                        <i class="icon-heart-o"></i>
-                                        <span class="wishlist-count badge">3</span>
-                                    </div>
-                                    <p>Wishlist</p>
-                                </a>
-                            </div>
-
-                            <div class="dropdown cart-dropdown">
-                                <a href="#" class="dropdown-toggle"
-                                    role="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false"
-                                    data-display="static">
-                                    <div class="icon">
-                                        <i class="icon-shopping-cart"></i>
-                                        <span class="cart-count">2</span>
-                                    </div>
-                                    <p>Cart</p>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <div class="dropdown-cart-products">
-                                        <div class="product">
-                                            <div class="product-cart-details">
-                                                <h4 class="product-title">
-                                                    <a href="product.html">Flax
-                                                        Seed & Puff Mix - Tomato</a>
-                                                </h4>
-                                                <span class="cart-product-info">
-                                                    <span
-                                                        class="cart-product-qty">1</span>
-                                                    x 84.00
-                                                </span>
-                                            </div>
-
-                                            <figure
-                                                class="product-image-container">
-                                                <a href="product.html"
-                                                    class="product-image">
-                                                    <img
-                                                        src="assets/img/Flax Seed & Puff Mix - Tomato.png"
-                                                        alt="product">
-                                                </a>
-                                            </figure>
-                                            <a href="#" class="btn-remove"
-                                                title="Remove Product"><i
-                                                    class="icon-close"></i></a>
-                                        </div>
-
-                                        <div class="product">
-                                            <div class="product-cart-details">
-                                                <h4 class="product-title">
-                                                    <a href="product.html">Flax
-                                                        Seeds</a>
-                                                </h4>
-                                                <span class="cart-product-info">
-                                                    <span
-                                                        class="cart-product-qty">1</span>
-                                                    x ₹76.00
-                                                </span>
-                                            </div>
-
-                                            <figure
-                                                class="product-image-container">
-                                                <a href="product.html"
-                                                    class="product-image">
-                                                    <img
-                                                        src="assets/img/Flax Seeds.png"
-                                                        alt="product">
-                                                </a>
-                                            </figure>
-                                            <a href="#" class="btn-remove"
-                                                title="Remove Product"><i
-                                                    class="icon-close"></i></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="dropdown-cart-total">
-                                        <span>Total</span>
-
-                                        <span class="cart-total-price">₹160.00</span>
-                                    </div>
-
-                                    <div class="dropdown-cart-action">
-                                        <a href="cart.html"
-                                            class="btn btn-primary">View Cart</a>
-                                        <a href="checkout.html"
-                                            class="btn btn-outline-primary-2"><span>Checkout</span><i
-                                                class="icon-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="account">
-                                <a href="#signin-modal" data-toggle="modal"
-                                    title="My account">
-                                    <div class="icon">
-                                        <i class="icon-user"></i>
-                                    </div>
-                                    <p>Sign In</p>
-                                </a>
-                            </div>
                         </div>
                     </div>
-                </div>
-            </header>
-            <!-- End .header -->
-
-            <main class="main">
-
-                <!-- slider start -->
-                <div class="container">
-                    <div
-                        class="intro-slider-container slider-container-ratio mb-2">
-                        <div
-                            class="intro-slider owl-carousel owl-simple owl-light owl-nav-inside"
-                            data-toggle="owl"
-                            data-owl-options='{"nav": false}'>
-                            <div class="intro-slide">
-                                <figure class="slide-image">
-                                    <picture>
-                                        <img src="assets/img/slider11.png"
-                                            alt="Image Desc">
-                                    </picture>
-                                </figure>
-
-                                <div class="intro-content">
-                                    <h3 class="intro-subtitle">A Fine Mixture of</h3>
-                                    <h1 class="intro-title text-white">Test &
-                                        Tradition</h1>
-                                    <a href="category.html" class="btn shop-btn">
-                                        <span>Shop Now</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="intro-slide">
-                                <figure class="slide-image">
-                                    <picture>
-                                        <img src="assets/img/slider11.png"
-                                            alt="Image Desc">
-                                    </picture>
-                                </figure>
-
-                                <div class="intro-content">
-                                    <h3 class="intro-subtitle">A Fine Mixture of</h3>
-                                    <h1 class="intro-title text-white">Test &
-                                        Tradition</h1>
-                                    <a href="category.html" class="btn shop-btn">
-                                        <span>Shop Now</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="intro-slide">
-                                <figure class="slide-image">
-                                    <picture>
-                                        <img src="assets/img/slider11.png"
-                                            alt="Image Desc">
-                                    </picture>
-                                </figure>
-
-                                <div class="intro-content">
-                                    <h3 class="intro-subtitle">A Fine Mixture of</h3>
-                                    <h1 class="intro-title text-white">Test &
-                                        Tradition</h1>
-                                    <a href="category.html" class="btn shop-btn">
-                                        <span>Shop Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="slider-loader"></span>
-                    </div>
-                </div>
-                <!-- slider end -->
-
-                <!--Best Selling start -->
-                <div class="container product-slider-main mt-5">
-                    <div class="product-title-main">
-                        <div class="left-side-title">
-                            <h2 class="title title-border">Best Selling</h2>
-                        </div>
-                        <div class="right-side-title right-side-title-slider">
-                            <a href="category.html" class="view-all-a"> View All</a>
-                        </div>
-                    </div>
-                    <div
-                        class="owl-carousel owl-simple owl-nav-top carousel-equal-height carousel-with-shadow"
-                        data-toggle="owl" data-owl-options='{
-                    "nav": true, 
-                    "dots": false,
-                    "margin": 20,
-                    "loop": true,
-                    "responsive": {
-                        "0": {
-                            "items":1
-                        },
-                        "480": {
-                            "items":1
-                        },
-                        "768": {
-                            "items":3
-                        },
-                        "1200": {
-                            "items":4
+                </section>
+        
+            </div>
+        
+        
+            <!-- scripts -->
+            <script>
+                "use strict";
+        
+                // copyAdmin
+                function copyAdmin() {
+                    $('#email').val('admin@themetags.com');
+                    $('#password').val('123456');
+                }
+        
+                // copyCustomer
+                function copyCustomer() {
+                    $('#email').val('customer@themetags.com');
+                    $('#password').val('123456');
+                }
+        
+                // change input to phone
+                function handleLoginWithPhone() {
+                    $('.login_with').val('phone');
+        
+                    $('.login-email').addClass('d-none');
+                    $('.login-email input').prop('required', false);
+        
+                    $('.login-phone').removeClass('d-none');
+                    $('.login-phone input').prop('required', true);
+                }
+        
+                // change input to email
+                function handleLoginWithEmail() {
+                    $('.login_with').val('email');
+                    $('.login-email').removeClass('d-none');
+                    $('.login-email input').prop('required', true);
+        
+                    $('.login-phone').addClass('d-none');
+                    $('.login-phone input').prop('required', false);
+                }
+        
+        
+                // disable login button
+                function handleSubmit() {
+                    $('#login-form').on('submit', function(e) {
+                        $('.sign-in-btn').prop('disabled', true);
+                    });
+                }
+            </script>
+        
+            <!--build:js-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/jquery-3.6.4.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/jquery-ui.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/bootstrap.bundle.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/swiper-bundle.min.js?v=v2.7.0">
+            </script>
+            <script
+                src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/jquery.magnific-popup.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/simplebar.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/parallax-scroll.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/isotop.pkgd.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/countdown.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/range-slider.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/waypoints.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/counterup.min.js?v=v2.7.0">
+            </script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/vendors/clipboard.min.js?v=v2.7.0">
+            </script>
+        
+            <script src="https://localhost/ska_web/public/frontend/common/js/toastr.min.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/common/js/select2.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/default/assets/js/app.js?v=v2.7.0"></script>
+        
+            <script src="https://localhost/ska_web/public/frontend/assets/js/demos/demo-10.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/assets/js/main.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/assets/js/owl.carousel.min.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/assets/js/nouislider.min.js?v=v2.7.0"></script>
+            <script src="https://localhost/ska_web/public/frontend/assets/js/plugins.min.js?v=v2.7.0"></script>
+        
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+            </script>
+        
+            <script>
+                "use strict"
+        
+            // runs when the document is ready
+            $(document).ready(function() {
+                initIsotop();
+            });
+        
+            // tooltip
+            $(function() {
+                $('[data-bs-toggle="tooltip"]').tooltip();
+            });
+        
+        
+            //isotop filter grid 
+            function initIsotop() {
+                var $filter_grid = $(".filter_group").isotope({});
+                $(".filter-btns").on("click", "button", function() {
+                    var filterValue = $(this).attr("data-filter");
+                    $filter_grid.isotope({
+                        filter: filterValue,
+                    });
+                    $(this).parent().find("button.active").removeClass("active");
+                    $(this).addClass("active");
+                });
+            }
+        
+            // copy coupon code
+            $(function() {
+                new ClipboardJS('.copy-text');
+            });
+            $(".copyBtn").each(function() {
+                $(this).on("click", function() {
+                    $(this).html('Copied');
+                });
+            });
+        
+            // change language
+            function changeLocaleLanguage(e) {
+                var locale = e.dataset.flag;
+                $.post("https://localhost/ska_web/backend/change-language", {
+                    _token: 'LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze',
+                    locale: locale
+                }, function(data) {
+                    setTimeout(() => {
+                        location.reload();
+                    }, 300);
+                });
+            }
+        
+            // change currency
+            function changeLocaleCurrency(e) {
+                var currency_code = e.dataset.currency;
+                $.post("https://localhost/ska_web/backend/change-currency", {
+                    _token: 'LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze',
+                    currency_code: currency_code
+                }, function(data) {
+                    setTimeout(() => {
+                        location.reload();
+                    }, 300);
+                });
+            }
+        
+            // change location
+            function changeLocation(e) {
+                var location_id = e.dataset.location;
+                $.post("https://localhost/ska_web/backend/change-location", {
+                    _token: 'LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze',
+                    location_id: location_id
+                }, function(data) {
+                    setTimeout(() => {
+                        location.reload();
+                    }, 300);
+                });
+            }
+        
+        
+            // showRejectionReason
+            function showRejectionReason(reason) {
+                $('.reason').empty();
+                $('#refundRejectionModal').modal('show');
+                $('.reason').html(reason);
+            }
+        
+            // show product details in modal
+            function showProductDetailsModal(productId) {
+                $('#quickview_modal .product-info').html(null);
+                $('.data-preloader-wrapper>div').addClass('spinner-border');
+                $('.data-preloader-wrapper').addClass('min-h-400');
+                $('#quickview_modal').modal('show');
+        
+                $.post('https://localhost/ska_web/products/show-product-info', {
+                    _token: 'LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze',
+                    id: productId
+                }, function(data) {
+                    setTimeout(() => {
+                        $('.data-preloader-wrapper>div').removeClass('spinner-border');
+                        $('.data-preloader-wrapper').removeClass('min-h-400');
+                        $('#quickview_modal .product-info').html(data);
+                        TT.ProductSliders();
+                        cartFunc();
+                    }, 200);
+                });
+            }
+        
+            $('#quickview_modal').on('hide.bs.modal', function(e) {
+                $('#quickview_modal .product-info').html(null);
+            });
+        
+            // address modal select2
+            function addressModalSelect2(parent = '.addAddressModal') {
+                $('.select2Address').select2({
+                    dropdownParent: $(parent)
+                });
+            }
+            addressModalSelect2();
+        
+            // ajax toast 
+            function notifyMe(level, message) {
+                if (level == 'danger') {
+                    level = 'error';
+                }
+                toastr.options = {
+                    "timeOut": "5000",
+                    "closeButton": true,
+                    "positionClass": "toast-top-center",
+                };
+                toastr[level](message);
+            }
+        
+            // laravel flash as toast messages
+            
+        
+            
+        
+            // get selected variation information
+            function getVariationInfo() {
+                if ($('.add-to-cart-form input[name=quantity]').val() > 0 && isValidForAddingToCart()) {
+                    let data = $('.add-to-cart-form').serializeArray();
+                    $.ajax({
+                        type: "POST",
+                        url: 'https://localhost/ska_web/products/get-variation-info',
+                        data: data,
+                        success: function(response) {
+        
+                            $('.all-pricing').addClass('d-none');
+                            $('.variation-pricing').removeClass('d-none');
+                            $('.variation-pricing').html(response.data.price);
+        
+                            $('.add-to-cart-form input[name=product_variation_id]').val(response.data
+                                .id);
+                            $('.add-to-cart-form input[name=quantity]').prop('max', response.data.stock);
+        
+                            if (response.data.stock < 1) {
+                                $('.add-to-cart-btn').prop('disabled', true);
+                                $('.add-to-cart-btn .add-to-cart-text').html(TT.localize.outOfStock);
+                            } else {
+                                $('.add-to-cart-btn').prop('disabled', false);
+                                $('.add-to-cart-btn .add-to-cart-text').html(TT.localize.addToCart);
+                                $('.qty-increase-decrease input[name=quantity]').val(1);
+                            }
+                        }
+                    });
+                }
+            }
+        
+            // check if it can be added to cart
+            function isValidForAddingToCart() {
+        
+                var count = 0;
+                $('.variation-for-cart').each(function() {
+                    // how many variations
+                    count++;
+                });
+        
+                if ($('.product-radio-btn input:radio:checked').length == count) {
+                    return true;
+                }
+        
+                return false;
+            }
+        
+            // cart func
+            function cartFunc() {
+                // on selection of variation
+                $('.product-radio-btn input').on('change', function() {
+                    getVariationInfo();
+                });
+        
+                // increase qty
+                $('.qty-increase-decrease .increase').on('click', function() {
+                    var prevValue = $('.product-qty input[name=quantity]').val();
+                    var maxValue = $('.product-qty input[name=quantity]').attr('max');
+                    if (maxValue == undefined || parseInt(prevValue) < parseInt(maxValue)) {
+                        $('.qty-increase-decrease input[name=quantity]').val(parseInt(prevValue) + 1)
+                    }
+                });
+        
+                // decrease qty
+                $('.qty-increase-decrease .decrease').on('click', function() {
+                    var prevValue = $('.product-qty input[name=quantity]').val();
+                    if (prevValue > 1) {
+                        $('.qty-increase-decrease input[name=quantity]').val(parseInt(prevValue) - 1)
+                    }
+                });
+        
+                // add to cart form submit
+                $('.add-to-cart-form').on('submit', function(e) {
+                    e.preventDefault();
+                    if (isValidForAddingToCart()) {
+                        $('.add-to-cart-btn').prop('disabled', true);
+                        $('.add-to-cart-btn .add-to-cart-text').html(TT.localize.addingToCart);
+        
+                        // add to cart here
+                        let data = $('.add-to-cart-form').serializeArray();
+                        $.ajax({
+                            type: "POST",
+                            url: 'https://localhost/ska_web/add-to-cart',
+                            data: data,
+                            success: function(data) {
+                                $('.add-to-cart-btn').prop('disabled', false);
+                                $('.add-to-cart-btn .add-to-cart-text').html(TT.localize.addToCart);
+                                updateCarts(data);
+                                notifyMe(data.alert, data.message);
+                            }
+                        });
+        
+                    } else {
+                        optionsAlert();
+                    }
+                })
+            }
+            cartFunc();
+        
+            // without variation form submit
+            function directAddToCartFormSubmit($this) {
+                // add to cart here
+                let parent = $($this).closest('.direct-add-to-cart-form');
+        
+                parent.find('.direct-add-to-cart-btn').prop('disabled', true);
+        
+                let text = parent.find('.add-to-cart-text').html();
+                parent.find('.add-to-cart-text').html(TT.localize.pleaseWait);
+        
+        
+                let data = parent.serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: 'https://localhost/ska_web/add-to-cart',
+                    data: data,
+                    success: function(data) {
+                        parent.find('.direct-add-to-cart-btn').prop('disabled', false);
+        
+                        if (text.includes("Buy Now")) {
+                            parent.find('.add-to-cart-text').html(TT.localize.buyNow);
+                        } else {
+                            parent.find('.add-to-cart-text').html(TT.localize.addToCart);
+                        }
+                        updateCarts(data);
+                        notifyMe(data.alert, data.message);
+                    }
+                });
+            }
+        
+            // please choose all the available options
+            function optionsAlert() {
+                notifyMe('warning', TT.localize.optionsAlert);
+            }
+        
+            // handleCartItem
+            function handleCartItem(action, id) {
+                let data = {
+                    _token: "LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze",
+                    action: action,
+                    id: id,
+                };
+        
+                $.ajax({
+                    type: "POST",
+                    url: 'https://localhost/ska_web/update-cart',
+                    data: data,
+                    success: function(data) {
+                        if (data.success == true) {
+        
+                            $('.apply-coupon-btn').removeClass('d-none');
+                            $('.clear-coupon-btn').addClass('d-none');
+                            $('.apply-coupon-btn').prop('disabled', false);
+                            $('.apply-coupon-btn').html(TT.localize.applyCoupon);
+                            updateCarts(data);
+                            if (action == 'increase' && data.message) {
+                                notifyMe(data.alert, data.message);
+                            }
                         }
                     }
-                }'>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/Flax Seed & Puff Mix - Tomato.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Flax
-                                        Seed & Puff Mix - Tomato</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹80</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img src="assets/img/Flax Seeds.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Flax
-                                        Seeds</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹90</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/Frozen Strawberries.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Frozen
-                                        Strawberries</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/Lemon Tossed Soyabeans.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Lemon
-                                        Tossed Soyabeans</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/Nacho Crisps - Wasabi.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Nacho
-                                        Crisps - Wasabi</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/Roasted Moong Delight.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Roasted
-                                        Moong Delight</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Best Selling end -->
-
-                <!-- Product in Trending start -->
-                <div class="container product-slider-main">
-                    <div class="product-title-main">
-                        <div class="left-side-title">
-                            <h2 class="title title-border">Product in Trending</h2>
-                        </div>
-                        <div class="right-side-title">
-                            <a href="category.html" class="view-all-a"> View All</a>
-                        </div>
-                    </div>
-                    <div
-                        class="owl-carousel owl-simple owl-nav-top carousel-equal-height carousel-with-shadow"
-                        data-toggle="owl" data-owl-options='{
-                    "nav": false, 
-                    "dots": false,
-                    "margin": 20,
-                    "loop": true,
-                    "responsive": {
-                        "0": {
-                            "items":1
-                        },
-                        "480": {
-                            "items":1
-                        },
-                        "768": {
-                            "items":3
-                        },
-                        "1200": {
-                            "items":4
+                });
+            }
+        
+            // coupon-form form submit
+            $('.coupon-form').on('submit', function(e) {
+                e.preventDefault();
+                $('.apply-coupon-btn').prop('disabled', true);
+                $('.apply-coupon-btn').html(TT.localize.pleaseWait);
+        
+                // apply coupon here
+                let data = $('.coupon-form').serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: 'https://localhost/ska_web/apply-coupon',
+                    data: data,
+                    success: function(data) {
+                        if (data.success == false) {
+                            notifyMe('error', data.message);
+                            $('.apply-coupon-btn').prop('disabled', false);
+                            $('.apply-coupon-btn').html(TT.localize.applyCoupon);
+                        } else {
+                            // append clear button 
+                            $('.coupon-input').prop('disabled', false);
+                            $('.apply-coupon-btn').addClass('d-none');
+                            $('.clear-coupon-btn').removeClass('d-none');
+        
+                            $('.apply-coupon-btn').prop('disabled', false);
+                            $('.apply-coupon-btn').html(TT.localize.applyCoupon);
+        
+                            updateCouponPrice(data);
+        
                         }
                     }
-                }'>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img src="assets/img/Black Chia Seeds.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Black
-                                        Chia Seeds</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/California Prunes - Pitted, Dried Plums.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">California
-                                        Prunes - Pitted, Dried Plums</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/Chilli Masala Pumpkin.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Chilli
-                                        Masala Pumpkin</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/Salsa Sweet Potato Chips.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Salsa
-                                        Sweet Potato Chips</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product in Trending end -->
-
-                <!-- Hot Deals start -->
-                <div class="container mt-3">
-                    <div class="product-title-main">
-                        <div class="left-side-title">
-                            <h2 class="title title-border">Hot Deals</h2>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-4">
-                            <div
-                                class="banner banner-overlay banner-overlay-light">
-                                <a href="#">
-                                    <img src="assets/img/banner1.png"
-                                        alt="Banner">
-                                </a>
-                                <div class="banner-content">
-                                    <h4 class="banner-subtitle"><a href="#">Smart
-                                            Offer</a></h4>
-                                    <!-- End .banner-subtitle -->
-                                    <h3 class="banner-title"><a href="#">Save
-                                            ₹150 <strong>on Samsung <br>Galaxy
-                                                Note9</strong></a></h3><!-- End .banner-title -->
-                                    <a href="#" class="banner-link">Shop Now<i
-                                            class="icon-long-arrow-right"></i></a>
-                                </div><!-- End .banner-content -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-md-4 -->
-
-                        <div class="col-md-6 col-lg-4">
-                            <div
-                                class="banner banner-overlay banner-overlay-light">
-                                <a href="#">
-                                    <img src="assets/img/banner2.png"
-                                        alt="Banner">
-                                </a>
-
-                                <div class="banner-content">
-                                    <h4 class="banner-subtitle"><a href="#">Time
-                                            Deals</a></h4>
-                                    <!-- End .banner-subtitle -->
-                                    <h3 class="banner-title"><a href="#"><strong>Bose
-                                                SoundSport</strong> <br>Time
-                                            Deal
-                                            -30%</a></h3><!-- End .banner-title -->
-                                    <a href="#" class="banner-link">Shop Now<i
-                                            class="icon-long-arrow-right"></i></a>
-                                </div><!-- End .banner-content -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-md-4 -->
-
-                        <div class="col-md-6 col-lg-4">
-                            <div
-                                class="banner banner-overlay banner-overlay-light">
-                                <a href="#">
-                                    <img src="assets/img/banner1.png"
-                                        alt="Banner">
-                                </a>
-
-                                <div class="banner-content">
-                                    <h4 class="banner-subtitle"><a href="#">Clearance</a></h4>
-                                    <!-- End .banner-subtitle -->
-                                    <h3 class="banner-title"><a href="#"><strong>GoPro
-                                                - Fusion 360</strong> <br>Save
-                                            ₹70</a></h3><!-- End .banner-title -->
-                                    <a href="#" class="banner-link">Shop Now<i
-                                            class="icon-long-arrow-right"></i></a>
-                                </div><!-- End .banner-content -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-lg-4 -->
-                    </div><!-- End .row -->
-                </div>
-                <!-- Hot Deals end -->
-
-                <!-- People’s Choice start -->
-                <div class="container product-slider-main">
-                    <div class="product-title-main">
-                        <div class="left-side-title">
-                            <h2 class="title title-border">People’s Choice</h2>
-                        </div>
-                        <div class="right-side-title right-side-title-slider">
-                            <a href="category.html" class="view-all-a"> View All</a>
-                        </div>
-                    </div>
-                    <div
-                        class="owl-carousel owl-simple owl-nav-top carousel-equal-height carousel-with-shadow"
-                        data-toggle="owl" data-owl-options='{
-                    "nav": true, 
-                    "dots": false,
-                    "margin": 20,
-                    "loop": true,
-                    "responsive": {
-                        "0": {
-                            "items":1
-                        },
-                        "480": {
-                            "items":1
-                        },
-                        "768": {
-                            "items":3
-                        },
-                        "1200": {
-                            "items":4
-                        }
+                });
+            })
+        
+            // clear-coupon-btn clicked
+            $('.clear-coupon-btn').on('click', function(e) {
+                e.preventDefault();
+                // append clear button 
+                $('.coupon-input').prop('disabled', false);
+                $('.apply-coupon-btn').removeClass('d-none');
+                $('.clear-coupon-btn').addClass('d-none');
+        
+                $.ajax({
+                    type: "GET",
+                    url: 'https://localhost/ska_web/clear-coupon',
+                    success: function(data) {
+                        updateCouponPrice(data);
                     }
-                }'>
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/1201458_2-bigbasket-baby-wipes-sea-breeze-no-paraben-double-moisturizing.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">baby-wipes-sea-breeze-no-paraben-double-moisturizing</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/1201460_3-bigbasket-baby-wipes-cherry-blossom-no-paraben-double-moisturizing.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">baby-wipes-cherry-blossom-no-paraben-double-moisturizing</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/1206544_2-himalaya-baby-wipes-gentle-baby.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">himalaya-baby-wipes-gentle-baby</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/1208292_2-bigbasket-baby-wipes-fresh-no-paraben-double-moisturizing.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">baby-wipes-fresh-no-paraben-double-moisturizing</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <figure class="product-media">
-                                <span class="product-label label-sale">40% OFF</span>
-                                <a href="product.html">
-                                    <img
-                                        src="assets/img/40091566_10-littles-soft-cleansing-baby-wipes-with-aloe-vera-jojoba-oil-vitamin-e.png"
-                                        alt="Product image"
-                                        class="product-image product-image-slider">
-                                </a>
-                                <div class="product-action-vertical">
-                                    <a href="#"
-                                        class="btn-product-icon  btn-expandable"><img
-                                            src="assets/img/FillHeart.jpg"
-                                            alt></a>
-                                    <a href="product.html"
-                                        class="btn-product-icon"
-                                        title="Quick view"><img
-                                            src="assets/img/FillEye.png" alt></a>
-                                </div>
-                            </figure>
-                            <div class="product-body">
-                                <h3 class="product-title"><a
-                                        href="product.html">baby-wipes-with-aloe-vera-jojoba-oil-vitamin-e</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">410 ML</a>
-                                </div>
-                                <div class="add-cart-btn-product">
-                                    <div class="product-price">
-                                        <span class="new-price">₹102</span>
-                                        <span class="old-price">₹120</span>
-                                    </div>
-                                    <div class="prodcut-added">
-                                        <span class="product-cart-btn"><a
-                                                href="cart.html">ADD</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- People’s Choice end -->
-
-                <!-- Prime Offers start -->
-                <div class="banner-group mt-3">
-                    <div class="container">
-                        <div class="product-title-main">
-                            <div class="left-side-title">
-                                <h2 class="title title-border">Prime Offers</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <a href="#">
-                                    <img src="assets/img/Group-1000005975.png"
-                                        alt="Banner">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Prime Offers end -->
-
-                <!-- New Added Product start -->
-                <div class="banner-group mt-3">
-                    <div class="container">
-                        <div class="product-title-main">
-                            <div class="left-side-title">
-                                <h2 class="title title-border">New Added Product</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 d-sm-none d-lg-block">
-                                <div class="banner banner-middle banner-overlay">
-                                    <a href="#">
-                                        <img
-                                            src="assets/img/Group-1000005976.png"
-                                            alt="Banner">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div
-                                    class="banner banner-large banner-overlay d-none d-sm-block">
-                                    <a href="#">
-                                        <img
-                                            src="assets/img/Group-1000005966.png"
-                                            alt="Banner">
-                                    </a>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="banner banner-overlay">
-                                            <a href="#">
-                                                <img
-                                                    src="assets/img/Group-1000005968.png"
-                                                    alt="Banner">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div
-                                            class="banner banner-overlay banner-overlay-light">
-                                            <a href="#">
-                                                <img
-                                                    src="assets/img/Group-1000005967.png"
-                                                    alt="Banner">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- New Added Product end -->
-
-                <!-- For daily uses start -->
-                <div class="container product-slider-main">
-                    <div class="product-title-main">
-                        <div class="left-side-title">
-                            <h2 class="title title-border">For daily uses</h2>
-                        </div>
-                    </div>
-                    <div
-                        class="owl-carousel owl-simple owl-nav-top carousel-equal-height carousel-with-shadow"
-                        data-toggle="owl" data-owl-options='{
-                    "nav": false, 
-                    "dots": false,
-                    "margin": 20,
-                    "loop": true,
-                    "responsive": {
-                        "0": {
-                            "items":2
-                        },
-                        "480": {
-                            "items":2
-                        },
-                        "768": {
-                            "items":3
-                        },
-                        "1200": {
-                            "items":6
-                        }
+                });
+            })
+        
+            function updateCouponPrice(data) {
+                $('.coupon-discount-wrapper').toggleClass('d-none');
+                $('.coupon-discount-price').html(data.couponDiscount);
+            }
+        
+            // update carts markup
+            function updateCarts(data) {
+                $('.cart-counter').empty();
+                $('.sub-total-price').empty();
+        
+                $('.cart-navbar-wrapper .simplebar-content').empty();
+                $('.cart-listing').empty();
+        
+                if (data.cartCount > 0) {
+                    $('.cart-counter').removeClass('d-none');
+                } else {
+                    $('.cart-counter').addClass('d-none');
+                }
+        
+                $('.cart-counter').html(data.cartCount);
+                $('.sub-total-price').html(data.subTotal);
+                $('.cart-navbar-wrapper .simplebar-content').html(data.navCarts);
+                $('.cart-listing').html(data.carts);
+                $('.coupon-discount-wrapper').addClass('d-none');
+                $('.checkout-sidebar').empty();
+        
+            }
+        
+            // get logistics to check out
+            function getLogistics(city_id) {
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': 'LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze'
+                    },
+                    url: "https://localhost/ska_web/get-ch%20eckout-logistics",
+                    type: 'POST',
+                    data: {
+                        city_id: city_id
+                    },
+                    success: function(data) {
+                        $('.checkout-sidebar').empty();
+                        $('.checkout-logistics').empty();
+                        $('.checkout-logistics').html(data.logistics);
+                        $('.checkout-sidebar').html(data.summary);
                     }
-                }'>
-
-                        <div class="product-daily">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/img/dayliuesd.png"
-                                        alt="Product image">
-                                </a>
-                            </figure>
-                            <div class="product-body-daily">
-                                <h3 class="product-title"><a href="product.html">Green
-                                        Herbal tea</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">200 gm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-daily">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/img/dayliuesd.png"
-                                        alt="Product image">
-                                </a>
-                            </figure>
-                            <div class="product-body-daily">
-                                <h3 class="product-title"><a href="product.html">Green
-                                        Herbal tea</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">200 gm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-daily">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/img/dayliuesd.png"
-                                        alt="Product image">
-                                </a>
-                            </figure>
-                            <div class="product-body-daily">
-                                <h3 class="product-title"><a href="product.html">Green
-                                        Herbal tea</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">200 gm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-daily">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/img/dayliuesd.png"
-                                        alt="Product image">
-                                </a>
-                            </figure>
-                            <div class="product-body-daily">
-                                <h3 class="product-title"><a href="product.html">Green
-                                        Herbal tea</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">200 gm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-daily">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/img/dayliuesd.png"
-                                        alt="Product image">
-                                </a>
-                            </figure>
-                            <div class="product-body-daily">
-                                <h3 class="product-title"><a href="product.html">Green
-                                        Herbal tea</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">200 gm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-daily">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/img/dayliuesd.png"
-                                        alt="Product image">
-                                </a>
-                            </figure>
-                            <div class="product-body-daily">
-                                <h3 class="product-title"><a href="product.html">Green
-                                        Herbal tea</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">200 gm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-daily">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/img/dayliuesd.png"
-                                        alt="Product image">
-                                </a>
-                            </figure>
-                            <div class="product-body-daily">
-                                <h3 class="product-title"><a href="product.html">Green
-                                        Herbal tea</a></h3>
-                                <div class="product-cat">
-                                    <a href="#">200 gm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Product in Trending end -->
-
-                <!-- Our services start -->
-                <div class="container mt-3">
-                    <div class="product-title-main">
-                        <div class="left-side-title">
-                            <h2 class="title title-border">Our services</h2>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="icon-box icon-box-card text-center">
-                                <span class="icon-box-icon">
-                                    <img src="assets/img/Services.png" alt>
-                                </span>
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">FAST & ON TIME
-                                        DELIVERY</h3>
-                                    <p>Free delivery for all orders over ₹140</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="icon-box icon-box-card text-center">
-                                <span class="icon-box-icon">
-                                    <img src="assets/img/call.png" alt>
-                                </span>
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">24/7 CUSTOMER
-                                        SERVICE</h3>
-                                    <p>Friendly 24/7 customer support</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="icon-box icon-box-card text-center">
-                                <span class="icon-box-icon">
-                                    <img src="assets/img/money.png" alt>
-                                </span>
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">MONEY BACK
-                                        GUARANTEE</h3>
-                                    <p>We reurn money within 30 days</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="icon-box icon-box-card text-center">
-                                <span class="icon-box-icon">
-                                    <img src="assets/img/money.png" alt>
-                                </span>
-                                <div class="icon-box-content">
-                                    <h3 class="icon-box-title">MONEY BACK
-                                        GUARANTEE</h3>
-                                    <p>We reurn money within 30 days</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Our services end -->
-            </main>
-
-            <footer class="footer footer-dark">
-                <div class="footer-middle">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-lg-4">
-                                <div class="widget">
-                                    <h4 class="widget-title">quick Links</h4>
-                                    <div class="row">
-                                        <ul class="widget-list col-md-6">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="#">Careers</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Press</a></li>
-                                            <li><a href="#">Lead</a></li>
-                                            <li><a href="#">Value</a></li>
-                                        </ul>
-                                        <ul class="widget-list col-md-6">
-                                            <li><a href="#">Privacy</a></li>
-                                            <li><a href="#">Terms</a></li>
-                                            <li><a href="#">FAQs</a></li>
-                                            <li><a href="#">Security</a></li>
-                                            <li><a href="#">mobile</a></li>
-                                            <li><a href="#">contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-lg-5">
-                                <div class="widget">
-                                    <h4 class="widget-title">Categories</h4>
-                                    <div class="row">
-                                        <ul class="widget-list col-md-6">
-                                            <li><a href="category.html">Cold
-                                                    Drinks & Juices</a></li>
-                                            <li><a href="category.html">Tea,
-                                                    Coffee & Health Drinks</a></li>
-                                            <li><a href="category.html">Bakery &
-                                                    Biscuits</a></li>
-                                            <li><a href="category.html">Dry
-                                                    Fruits, Masala & Oil</a></li>
-                                            <li><a href="category.html">Sauces &
-                                                    Spreads</a></li>
-                                            <li><a href="category.html">Organic
-                                                    & Premium</a></li>
-                                        </ul>
-                                        <ul class="widget-list col-md-6">
-                                            <li><a href="category.html">Paan
-                                                    Corner</a></li>
-                                            <li><a href="category.html">Pharma &
-                                                    Wellness</a></li>
-                                            <li><a href="category.html">Cleaning
-                                                    Essentials</a></li>
-                                            <li><a href="category.html">Home &
-                                                    Office</a></li>
-                                            <li><a href="category.html">Ice
-                                                    Creams</a></li>
-                                            <li><a href="category.html">Frozen
-                                                    Desserts</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-lg-3 text-center">
-                                <div class="widget widget-about">
-                                    <img src="assets/images/logo.png"
-                                        class="footer-logo" alt="Footer Logo"
-                                        width="105"
-                                        height="25">
-                                    <p class="footer-about-text">Praesent
-                                        dapibus, neque id cursus ucibus,
-                                        tortor neque egestas </p>
-                                    <div class="social-icons">
-                                        <a href="#" class="social-icon"
-                                            title="Facebook" target="_blank"><i
-                                                class="icon-facebook-f"></i></a>
-                                        <a href="#" class="social-icon"
-                                            title="Twitter" target="_blank"><i
-                                                class="icon-twitter"></i></a>
-                                        <a href="#" class="social-icon"
-                                            title="Instagram" target="_blank"><i
-                                                class="icon-instagram"></i></a>
-                                        <a href="#" class="social-icon"
-                                            title="Youtube" target="_blank"><i
-                                                class="icon-youtube"></i></a>
-                                        <a href="#" class="social-icon"
-                                            title="Pinterest" target="_blank"><i
-                                                class="icon-pinterest"></i></a>
-                                    </div>
-                                    <!-- <figure class="footer-payments">
-                                    <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
-                                </figure>  -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="container">
-                        <p class="footer-copyright">© Copyright SKA Food Market
-                            India 2023. All right reserved. </p>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
-
+                });
+            }
+        
+            //  get logistics to check out -- onchange
+            $(document).on('change', '[name=chosen_logistic_zone_id]', function() {
+                var chosen_logistic_zone_id = $(this).val();
+                getShippingAmount(chosen_logistic_zone_id);
+            });
+        
+            // get logistics to check out
+            function getShippingAmount(logistic_zone_id) {
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': 'LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze'
+                    },
+                    url: "https://localhost/ska_web/shipping-amount",
+                    type: 'POST',
+                    data: {
+                        logistic_zone_id: logistic_zone_id
+                    },
+                    success: function(data) {
+                        $('.checkout-sidebar').empty();
+                        $('.checkout-sidebar').html(data);
+                    }
+                });
+            }
+        
+            //  submit checkout form
+            $(document).on('submit', '.checkout-form', function(e) {
+                // shipping address not selected
+                if ($('.checkout-form input[name=shipping_address_id]:checked').length == 0) {
+                    notifyMe('error', 'Please select shipping address');
+                    e.preventDefault();;
+                    return false;
+                }
+        
+                // logistic not selected
+                if ($('.checkout-form input[name=chosen_logistic_zone_id]:checked').length == 0) {
+                    notifyMe('error', 'Please select logistic');
+                    e.preventDefault();;
+                    return false;
+                }
+        
+                // billing address not selected
+                if ($('.checkout-form input[name=billing_address_id]:checked').length == 0) {
+                    notifyMe('error', 'Please select billing address');
+                    e.preventDefault();;
+                    return false;
+                }
+            });
+        
+            // add to wishlist
+            function addToWishlist(productId) {
+                            notifyMe('warning', 'Please login first');
+                    }
+            </script>
+            <!--endbuild-->
+            <script type="text/javascript">
+                var phpdebugbar = new PhpDebugBar.DebugBar();
+        phpdebugbar.addIndicator("php_version", new PhpDebugBar.DebugBar.Indicator({"icon":"code","tooltip":"PHP Version"}), "right");
+        phpdebugbar.addTab("messages", new PhpDebugBar.DebugBar.Tab({"icon":"list-alt","title":"Messages", "widget": new PhpDebugBar.Widgets.MessagesWidget()}));
+        phpdebugbar.addIndicator("time", new PhpDebugBar.DebugBar.Indicator({"icon":"clock-o","tooltip":"Request Duration"}), "right");
+        phpdebugbar.addTab("timeline", new PhpDebugBar.DebugBar.Tab({"icon":"tasks","title":"Timeline", "widget": new PhpDebugBar.Widgets.TimelineWidget()}));
+        phpdebugbar.addIndicator("memory", new PhpDebugBar.DebugBar.Indicator({"icon":"cogs","tooltip":"Memory Usage"}), "right");
+        phpdebugbar.addTab("exceptions", new PhpDebugBar.DebugBar.Tab({"icon":"bug","title":"Exceptions", "widget": new PhpDebugBar.Widgets.ExceptionsWidget()}));
+        phpdebugbar.addTab("views", new PhpDebugBar.DebugBar.Tab({"icon":"leaf","title":"Views", "widget": new PhpDebugBar.Widgets.TemplatesWidget()}));
+        phpdebugbar.addTab("route", new PhpDebugBar.DebugBar.Tab({"icon":"share","title":"Route", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+        phpdebugbar.addIndicator("currentroute", new PhpDebugBar.DebugBar.Indicator({"icon":"share","tooltip":"Route"}), "right");
+        phpdebugbar.addTab("queries", new PhpDebugBar.DebugBar.Tab({"icon":"database","title":"Queries", "widget": new PhpDebugBar.Widgets.LaravelSQLQueriesWidget()}));
+        phpdebugbar.addTab("models", new PhpDebugBar.DebugBar.Tab({"icon":"cubes","title":"Models", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+        phpdebugbar.addTab("emails", new PhpDebugBar.DebugBar.Tab({"icon":"inbox","title":"Mails", "widget": new PhpDebugBar.Widgets.MailsWidget()}));
+        phpdebugbar.addTab("gate", new PhpDebugBar.DebugBar.Tab({"icon":"list-alt","title":"Gate", "widget": new PhpDebugBar.Widgets.MessagesWidget()}));
+        phpdebugbar.addTab("session", new PhpDebugBar.DebugBar.Tab({"icon":"archive","title":"Session", "widget": new PhpDebugBar.Widgets.VariableListWidget()}));
+        phpdebugbar.addTab("request", new PhpDebugBar.DebugBar.Tab({"icon":"tags","title":"Request", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+        phpdebugbar.setDataMap({
+        "php_version": ["php.version", ],
+        "messages": ["messages.messages", []],
+        "messages:badge": ["messages.count", null],
+        "time": ["time.duration_str", '0ms'],
+        "timeline": ["time", {}],
+        "memory": ["memory.peak_usage_str", '0B'],
+        "exceptions": ["exceptions.exceptions", []],
+        "exceptions:badge": ["exceptions.count", null],
+        "views": ["views", []],
+        "views:badge": ["views.nb_templates", 0],
+        "route": ["route", {}],
+        "currentroute": ["route.uri", ],
+        "queries": ["queries", []],
+        "queries:badge": ["queries.nb_statements", 0],
+        "models": ["models.data", {}],
+        "models:badge": ["models.count", 0],
+        "emails": ["swiftmailer_mails.mails", []],
+        "emails:badge": ["swiftmailer_mails.count", null],
+        "gate": ["gate.messages", []],
+        "gate:badge": ["gate.count", null],
+        "session": ["session", {}],
+        "request": ["request", {}]
+        });
+        phpdebugbar.restoreState();
+        phpdebugbar.ajaxHandler = new PhpDebugBar.AjaxHandler(phpdebugbar, undefined, true);
+        phpdebugbar.ajaxHandler.bindToFetch();
+        phpdebugbar.ajaxHandler.bindToXHR();
+        phpdebugbar.setOpenHandler(new PhpDebugBar.OpenHandler({"url":"https:\/\/localhost\/ska_web\/_debugbar\/open"}));
+        phpdebugbar.addDataSet({"__meta":{"id":"X64729edfb590723e6055ec0b39edbfe2","datetime":"2023-12-27 13:03:08","utime":1703682188.820218,"method":"GET","uri":"\/ska_web\/login","ip":"::1"},"php":{"version":"8.2.4","interface":"apache2handler"},"messages":{"count":1,"messages":[{"message":"[13:03:08] LOG.warning: Callables of the form [\"Swift_SmtpTransport\", \"Swift_Transport_EsmtpTransport::__construct\"] are deprecated in C:\\xampp\\htdocs\\ska_web\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\SmtpTransport.php on line 36","message_html":null,"is_string":false,"label":"warning","time":1703682188.63862,"collector":"log"}]},"time":{"start":1703682188.1458,"end":1703682188.820243,"duration":0.6744427680969238,"duration_str":"674ms","measures":[{"label":"Booting","start":1703682188.1458,"relative_start":0,"end":1703682188.602921,"relative_end":1703682188.602921,"duration":0.4571208953857422,"duration_str":"457ms","memory":0,"memory_str":"0B","params":[],"collector":null},{"label":"Application","start":1703682188.60962,"relative_start":0.4638199806213379,"end":1703682188.820245,"relative_end":2.1457672119140625e-6,"duration":0.21062493324279785,"duration_str":"211ms","memory":0,"memory_str":"0B","params":[],"collector":null}]},"memory":{"peak_usage":23582544,"peak_usage_str":"22MB"},"exceptions":{"count":0,"exceptions":[]},"views":{"nb_templates":5,"templates":[{"name":"auth.login (\\resources\\views\\auth\\login.blade.php)","param_count":0,"params":[],"type":"blade"},{"name":"frontend.default.inc.social (\\resources\\views\\frontend\\default\\inc\\social.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"layouts.auth (\\resources\\views\\layouts\\auth.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"frontend.default.inc.css (\\resources\\views\\frontend\\default\\inc\\css.blade.php)","param_count":5,"params":["__env","app","errors","locale","localLang"],"type":"blade"},{"name":"frontend.default.inc.scripts (\\resources\\views\\frontend\\default\\inc\\scripts.blade.php)","param_count":5,"params":["__env","app","errors","locale","localLang"],"type":"blade"}]},"route":{"uri":"GET login","middleware":"web","controller":"App\\Http\\Controllers\\Auth\\LoginController@showLoginForm","namespace":"App\\Http\\Controllers","prefix":"","where":[],"as":"login","file":"<a href=\"phpstorm:\/\/open?file=C:\\xampp\\htdocs\\ska_web\\vendor\\laravel\\ui\\auth-backend\\AuthenticatesUsers.php&line=19\">\\vendor\\laravel\\ui\\auth-backend\\AuthenticatesUsers.php:19-22<\/a>"},"queries":{"nb_statements":2,"nb_failed_statements":0,"accumulated_duration":0.029079999999999998,"accumulated_duration_str":"29.08ms","statements":[{"sql":"select * from `media_managers` where `media_managers`.`id` = '7' limit 1","type":"query","params":[],"bindings":["7"],"hints":null,"show_copy":false,"backtrace":[{"index":19,"namespace":null,"name":"\\app\\Http\\Helpers\\Constant.php","line":137},{"index":22,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":23,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":24,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61},{"index":25,"namespace":null,"name":"\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php","line":37}],"duration":0.02845,"duration_str":"28.45ms","stmt_id":"\\app\\Http\\Helpers\\Constant.php:137","connection":"u520609701_ska","start_percent":0,"width_percent":97.834},{"sql":"select * from `languages` where `code` = 'en' limit 1","type":"query","params":[],"bindings":["en"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":"view","name":"a921e52631699e10b279cf8459676756d7d09afc","line":5},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61},{"index":20,"namespace":null,"name":"\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php","line":37}],"duration":0.00063,"duration_str":"630\u03bcs","stmt_id":"view::a921e52631699e10b279cf8459676756d7d09afc:5","connection":"u520609701_ska","start_percent":97.834,"width_percent":2.166}]},"models":{"data":{"App\\Models\\Language":1,"App\\Models\\MediaManager":1},"count":2},"swiftmailer_mails":{"count":0,"mails":[]},"gate":{"count":0,"messages":[]},"session":{"_token":"LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze","_flash":"array:2 [\n  \"old\" => []\n  \"new\" => []\n]","locale":"en","currency_code":"Rupee","local_currency_rate":"1","currency_symbol":"\u20b9","currency_symbol_alignment":"0","stock_location_id":"1","_previous":"array:1 [\n  \"url\" => \"https:\/\/localhost\/ska_web\/login\"\n]","PHPDEBUGBAR_STACK_DATA":"[]"},"request":{"path_info":"\/login","status_code":"<pre class=sf-dump id=sf-dump-1227253352 data-indent-pad=\"  \"><span class=sf-dump-num>200<\/span>\n<\/pre><script>Sfdump(\"sf-dump-1227253352\", {\"maxDepth\":0})<\/script>\n","status_text":"OK","format":"html","content_type":"text\/html; charset=UTF-8","request_query":"<pre class=sf-dump id=sf-dump-1466471698 data-indent-pad=\"  \">[]\n<\/pre><script>Sfdump(\"sf-dump-1466471698\", {\"maxDepth\":0})<\/script>\n","request_request":"<pre class=sf-dump id=sf-dump-1810931135 data-indent-pad=\"  \">[]\n<\/pre><script>Sfdump(\"sf-dump-1810931135\", {\"maxDepth\":0})<\/script>\n","request_headers":"<pre class=sf-dump id=sf-dump-168721555 data-indent-pad=\"  \"><span class=sf-dump-note>array:9<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>user-agent<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"21 characters\">PostmanRuntime\/7.36.0<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"3 characters\">*\/*<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>postman-token<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"36 characters\">9b3dda35-5d91-426d-842d-c2d1c49c680a<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>host<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"9 characters\">localhost<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept-encoding<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"17 characters\">gzip, deflate, br<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>connection<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"10 characters\">keep-alive<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>content-type<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"80 characters\">multipart\/form-data; boundary=--------------------------855625091560435397054385<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>cookie<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"756 characters\">XSRF-TOKEN=eyJpdiI6IjZicGI3YklXR2VBS1FpdVVSaTFDZFE9PSIsInZhbHVlIjoiTnFFbTU2THhlSjZLSnZ5MWlYVlRHbGw2RU5tQmcrOUZUd29xSVJqaGFjVG92b1lxSjl0MUhCUG0vdnUvdUg3bUc2bkZBdW1ubmZSZklkdFh4Znhxekp2V0NHMkMyOS90SlhGTUhrYlpWcC9uOVZvNG4rYkovWXZGUjVmYkxzZFgiLCJtYWMiOiJiNTgwYzAyYTI4ZmM5ZjNkZTFlYTFiYTZkMjM0NDc2MWJkN2RiOTVjMjM5ZjY0OTA5ZDhjNmMzZDI1MWJmYjk5IiwidGFnIjoiIn0%3D; guest_user_id=1703682058521; ska_food_market_india_session=eyJpdiI6IlFjaXFOc0F1NG9MQit0eFFkMGlZdGc9PSIsInZhbHVlIjoiaS91TysySzkxRDRidkVWaWQ3UEgzenYwUnZ4Q3FJamNveGc0Tjg2MjgxMy9oMUMyQy9TRGVZZldBdmNiRlFqQ0hydXdxUG9kQVliRXJ3bWtQQ2ZOajRYSGpxTVp4MjUxODBJbWl4S0lWSzRsYUNIak9HNThBSWhDVU9WdmZQR2MiLCJtYWMiOiI3NTM3NGM0ZThmNzBjMjZlN2I0OWU2ZDE2YTcxMzBlMzhjZTMzNWRiNThmYTYyZDFiZWIxM2MzY2I4MjAzNDVjIiwidGFnIjoiIn0%3D<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>content-length<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"3 characters\">506<\/span>\"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-168721555\", {\"maxDepth\":0})<\/script>\n","request_server":"<pre class=sf-dump id=sf-dump-1182164046 data-indent-pad=\"  \"><span class=sf-dump-note>array:76<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>REDIRECT_MIBDIRS<\/span>\" => \"<span class=sf-dump-str title=\"24 characters\">C:\/xampp\/php\/extras\/mibs<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_MYSQL_HOME<\/span>\" => \"<span class=sf-dump-str title=\"16 characters\">\\xampp\\mysql\\bin<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_OPENSSL_CONF<\/span>\" => \"<span class=sf-dump-str title=\"31 characters\">C:\/xampp\/apache\/bin\/openssl.cnf<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_PHP_PEAR_SYSCONF_DIR<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">\\xampp\\php<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_PHPRC<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">\\xampp\\php<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_TMP<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">\\xampp\\tmp<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_HTTPS<\/span>\" => \"<span class=sf-dump-str title=\"2 characters\">on<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_SSL_TLS_SNI<\/span>\" => \"<span class=sf-dump-str title=\"9 characters\">localhost<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_STATUS<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">200<\/span>\"\n  \"<span class=sf-dump-key>MIBDIRS<\/span>\" => \"<span class=sf-dump-str title=\"24 characters\">C:\/xampp\/php\/extras\/mibs<\/span>\"\n  \"<span class=sf-dump-key>MYSQL_HOME<\/span>\" => \"<span class=sf-dump-str title=\"16 characters\">\\xampp\\mysql\\bin<\/span>\"\n  \"<span class=sf-dump-key>OPENSSL_CONF<\/span>\" => \"<span class=sf-dump-str title=\"31 characters\">C:\/xampp\/apache\/bin\/openssl.cnf<\/span>\"\n  \"<span class=sf-dump-key>PHP_PEAR_SYSCONF_DIR<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">\\xampp\\php<\/span>\"\n  \"<span class=sf-dump-key>PHPRC<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">\\xampp\\php<\/span>\"\n  \"<span class=sf-dump-key>TMP<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">\\xampp\\tmp<\/span>\"\n  \"<span class=sf-dump-key>HTTPS<\/span>\" => \"<span class=sf-dump-str title=\"2 characters\">on<\/span>\"\n  \"<span class=sf-dump-key>SSL_TLS_SNI<\/span>\" => \"<span class=sf-dump-str title=\"9 characters\">localhost<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_S_DN_CN<\/span>\" => \"<span class=sf-dump-str title=\"9 characters\">localhost<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_I_DN_CN<\/span>\" => \"<span class=sf-dump-str title=\"9 characters\">localhost<\/span>\"\n  \"<span class=sf-dump-key>SSL_VERSION_INTERFACE<\/span>\" => \"<span class=sf-dump-str title=\"14 characters\">mod_ssl\/2.4.56<\/span>\"\n  \"<span class=sf-dump-key>SSL_VERSION_LIBRARY<\/span>\" => \"<span class=sf-dump-str title=\"14 characters\">OpenSSL\/1.1.1t<\/span>\"\n  \"<span class=sf-dump-key>SSL_PROTOCOL<\/span>\" => \"<span class=sf-dump-str title=\"7 characters\">TLSv1.3<\/span>\"\n  \"<span class=sf-dump-key>SSL_SECURE_RENEG<\/span>\" => \"<span class=sf-dump-str title=\"5 characters\">false<\/span>\"\n  \"<span class=sf-dump-key>SSL_COMPRESS_METHOD<\/span>\" => \"<span class=sf-dump-str title=\"4 characters\">NULL<\/span>\"\n  \"<span class=sf-dump-key>SSL_CIPHER<\/span>\" => \"<span class=sf-dump-str title=\"22 characters\">TLS_AES_256_GCM_SHA384<\/span>\"\n  \"<span class=sf-dump-key>SSL_CIPHER_EXPORT<\/span>\" => \"<span class=sf-dump-str title=\"5 characters\">false<\/span>\"\n  \"<span class=sf-dump-key>SSL_CIPHER_USEKEYSIZE<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">256<\/span>\"\n  \"<span class=sf-dump-key>SSL_CIPHER_ALGKEYSIZE<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">256<\/span>\"\n  \"<span class=sf-dump-key>SSL_CLIENT_VERIFY<\/span>\" => \"<span class=sf-dump-str title=\"4 characters\">NONE<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_M_VERSION<\/span>\" => \"<span class=sf-dump-str>1<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_M_SERIAL<\/span>\" => \"<span class=sf-dump-str title=\"16 characters\">B5C752C98781B503<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_V_START<\/span>\" => \"<span class=sf-dump-str title=\"24 characters\">Nov 10 23:48:47 2009 GMT<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_V_END<\/span>\" => \"<span class=sf-dump-str title=\"24 characters\">Nov  8 23:48:47 2019 GMT<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_S_DN<\/span>\" => \"<span class=sf-dump-str title=\"12 characters\">CN=localhost<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_I_DN<\/span>\" => \"<span class=sf-dump-str title=\"12 characters\">CN=localhost<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_A_KEY<\/span>\" => \"<span class=sf-dump-str title=\"6 characters\">******<\/span>\"\n  \"<span class=sf-dump-key>SSL_SERVER_A_SIG<\/span>\" => \"<span class=sf-dump-str title=\"21 characters\">sha1WithRSAEncryption<\/span>\"\n  \"<span class=sf-dump-key>SSL_SESSION_ID<\/span>\" => \"<span class=sf-dump-str title=\"64 characters\">ed67a4cbd0435920b2f91cd162bf2be00a6f3df500b94e687da95b37f0e34ff6<\/span>\"\n  \"<span class=sf-dump-key>SSL_SESSION_RESUMED<\/span>\" => \"<span class=sf-dump-str title=\"7 characters\">Resumed<\/span>\"\n  \"<span class=sf-dump-key>HTTP_USER_AGENT<\/span>\" => \"<span class=sf-dump-str title=\"21 characters\">PostmanRuntime\/7.36.0<\/span>\"\n  \"<span class=sf-dump-key>HTTP_ACCEPT<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">*\/*<\/span>\"\n  \"<span class=sf-dump-key>HTTP_POSTMAN_TOKEN<\/span>\" => \"<span class=sf-dump-str title=\"6 characters\">******<\/span>\"\n  \"<span class=sf-dump-key>HTTP_HOST<\/span>\" => \"<span class=sf-dump-str title=\"9 characters\">localhost<\/span>\"\n  \"<span class=sf-dump-key>HTTP_ACCEPT_ENCODING<\/span>\" => \"<span class=sf-dump-str title=\"17 characters\">gzip, deflate, br<\/span>\"\n  \"<span class=sf-dump-key>HTTP_CONNECTION<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">keep-alive<\/span>\"\n  \"<span class=sf-dump-key>CONTENT_TYPE<\/span>\" => \"<span class=sf-dump-str title=\"80 characters\">multipart\/form-data; boundary=--------------------------855625091560435397054385<\/span>\"\n  \"<span class=sf-dump-key>HTTP_COOKIE<\/span>\" => \"<span class=sf-dump-str title=\"756 characters\">XSRF-TOKEN=eyJpdiI6IjZicGI3YklXR2VBS1FpdVVSaTFDZFE9PSIsInZhbHVlIjoiTnFFbTU2THhlSjZLSnZ5MWlYVlRHbGw2RU5tQmcrOUZUd29xSVJqaGFjVG92b1lxSjl0MUhCUG0vdnUvdUg3bUc2bkZBdW1ubmZSZklkdFh4Znhxekp2V0NHMkMyOS90SlhGTUhrYlpWcC9uOVZvNG4rYkovWXZGUjVmYkxzZFgiLCJtYWMiOiJiNTgwYzAyYTI4ZmM5ZjNkZTFlYTFiYTZkMjM0NDc2MWJkN2RiOTVjMjM5ZjY0OTA5ZDhjNmMzZDI1MWJmYjk5IiwidGFnIjoiIn0%3D; guest_user_id=1703682058521; ska_food_market_india_session=eyJpdiI6IlFjaXFOc0F1NG9MQit0eFFkMGlZdGc9PSIsInZhbHVlIjoiaS91TysySzkxRDRidkVWaWQ3UEgzenYwUnZ4Q3FJamNveGc0Tjg2MjgxMy9oMUMyQy9TRGVZZldBdmNiRlFqQ0hydXdxUG9kQVliRXJ3bWtQQ2ZOajRYSGpxTVp4MjUxODBJbWl4S0lWSzRsYUNIak9HNThBSWhDVU9WdmZQR2MiLCJtYWMiOiI3NTM3NGM0ZThmNzBjMjZlN2I0OWU2ZDE2YTcxMzBlMzhjZTMzNWRiNThmYTYyZDFiZWIxM2MzY2I4MjAzNDVjIiwidGFnIjoiIn0%3D<\/span>\"\n  \"<span class=sf-dump-key>CONTENT_LENGTH<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">506<\/span>\"\n  \"<span class=sf-dump-key>PATH<\/span>\" => \"<span class=sf-dump-str title=\"862 characters\">C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Python310\\Scripts\\;C:\\Program Files\\Python310\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\xampp\\php;C:\\Program Files\\Java\\jdk-17.0.2\\bin;C:\\Program Files\\dotnet\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Google\\Chrome\\Application;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\xampp\\php-8.1.8;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Dell\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dell\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\MongoDB\\Server\\6.0\\bin;C:\\Users\\Dell\\AppData\\Roaming\\npm;C:\\Users\\Dell\\AppData\\Local\\Programs\\Microsoft VS Code\\bin<\/span>\"\n  \"<span class=sf-dump-key>SystemRoot<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">C:\\Windows<\/span>\"\n  \"<span class=sf-dump-key>COMSPEC<\/span>\" => \"<span class=sf-dump-str title=\"27 characters\">C:\\Windows\\system32\\cmd.exe<\/span>\"\n  \"<span class=sf-dump-key>PATHEXT<\/span>\" => \"<span class=sf-dump-str title=\"53 characters\">.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC<\/span>\"\n  \"<span class=sf-dump-key>WINDIR<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">C:\\Windows<\/span>\"\n  \"<span class=sf-dump-key>SERVER_SIGNATURE<\/span>\" => \"<span class=sf-dump-str title=\"95 characters\">&lt;address&gt;Apache\/2.4.56 (Win64) OpenSSL\/1.1.1t PHP\/8.2.4 Server at localhost Port 443&lt;\/address&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n<\/span><\/span>\"\n  \"<span class=sf-dump-key>SERVER_SOFTWARE<\/span>\" => \"<span class=sf-dump-str title=\"46 characters\">Apache\/2.4.56 (Win64) OpenSSL\/1.1.1t PHP\/8.2.4<\/span>\"\n  \"<span class=sf-dump-key>SERVER_NAME<\/span>\" => \"<span class=sf-dump-str title=\"9 characters\">localhost<\/span>\"\n  \"<span class=sf-dump-key>SERVER_ADDR<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">::1<\/span>\"\n  \"<span class=sf-dump-key>SERVER_PORT<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">443<\/span>\"\n  \"<span class=sf-dump-key>REMOTE_ADDR<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">::1<\/span>\"\n  \"<span class=sf-dump-key>DOCUMENT_ROOT<\/span>\" => \"<span class=sf-dump-str title=\"15 characters\">C:\/xampp\/htdocs<\/span>\"\n  \"<span class=sf-dump-key>REQUEST_SCHEME<\/span>\" => \"<span class=sf-dump-str title=\"5 characters\">https<\/span>\"\n  \"<span class=sf-dump-key>CONTEXT_PREFIX<\/span>\" => \"\"\n  \"<span class=sf-dump-key>CONTEXT_DOCUMENT_ROOT<\/span>\" => \"<span class=sf-dump-str title=\"15 characters\">C:\/xampp\/htdocs<\/span>\"\n  \"<span class=sf-dump-key>SERVER_ADMIN<\/span>\" => \"<span class=sf-dump-str title=\"17 characters\">admin@example.com<\/span>\"\n  \"<span class=sf-dump-key>SCRIPT_FILENAME<\/span>\" => \"<span class=sf-dump-str title=\"33 characters\">C:\/xampp\/htdocs\/ska_web\/index.php<\/span>\"\n  \"<span class=sf-dump-key>REMOTE_PORT<\/span>\" => \"<span class=sf-dump-str title=\"5 characters\">61290<\/span>\"\n  \"<span class=sf-dump-key>REDIRECT_URL<\/span>\" => \"<span class=sf-dump-str title=\"14 characters\">\/ska_web\/login<\/span>\"\n  \"<span class=sf-dump-key>GATEWAY_INTERFACE<\/span>\" => \"<span class=sf-dump-str title=\"7 characters\">CGI\/1.1<\/span>\"\n  \"<span class=sf-dump-key>SERVER_PROTOCOL<\/span>\" => \"<span class=sf-dump-str title=\"8 characters\">HTTP\/1.1<\/span>\"\n  \"<span class=sf-dump-key>REQUEST_METHOD<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">GET<\/span>\"\n  \"<span class=sf-dump-key>QUERY_STRING<\/span>\" => \"\"\n  \"<span class=sf-dump-key>REQUEST_URI<\/span>\" => \"<span class=sf-dump-str title=\"14 characters\">\/ska_web\/login<\/span>\"\n  \"<span class=sf-dump-key>SCRIPT_NAME<\/span>\" => \"<span class=sf-dump-str title=\"18 characters\">\/ska_web\/index.php<\/span>\"\n  \"<span class=sf-dump-key>PHP_SELF<\/span>\" => \"<span class=sf-dump-str title=\"18 characters\">\/ska_web\/index.php<\/span>\"\n  \"<span class=sf-dump-key>REQUEST_TIME_FLOAT<\/span>\" => <span class=sf-dump-num>1703682188.1458<\/span>\n  \"<span class=sf-dump-key>REQUEST_TIME<\/span>\" => <span class=sf-dump-num>1703682188<\/span>\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-1182164046\", {\"maxDepth\":0})<\/script>\n","request_cookies":"<pre class=sf-dump id=sf-dump-1026011327 data-indent-pad=\"  \"><span class=sf-dump-note>array:3<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>XSRF-TOKEN<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze<\/span>\"\n  \"<span class=sf-dump-key>guest_user_id<\/span>\" => <span class=sf-dump-const>null<\/span>\n  \"<span class=sf-dump-key>ska_food_market_india_session<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">odlrUERqEinfrFcy0gPpxZXQiKQQmUU1jndnXjpq<\/span>\"\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-1026011327\", {\"maxDepth\":0})<\/script>\n","response_headers":"<pre class=sf-dump id=sf-dump-1819720645 data-indent-pad=\"  \"><span class=sf-dump-note>array:5<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>content-type<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"24 characters\">text\/html; charset=UTF-8<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>cache-control<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"17 characters\">no-cache, private<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>date<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"29 characters\">Wed, 27 Dec 2023 13:03:08 GMT<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>set-cookie<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"431 characters\">XSRF-TOKEN=eyJpdiI6Ikd5UXZHZ002YzJPZG5MZGw2S3dkQ2c9PSIsInZhbHVlIjoic0hIcndIWThhWVh5bnF6eVZvTms1S1NIVi9mNmU4NDBuRzZQUEtDdi9VcFF3cUlqOVcyanY3UzNPQ1g4YnJ4bmhqWUhFNlNXMUxaOGtnd0FVbjRyOStGYzg3TGplUi9TTUtrbnMzeVhnd3VhV3dkZUUxbXVtZGY1R1FPWDV1ajIiLCJtYWMiOiI3OTc4ZGJiMTI1OGRiMDQ0NzExZjA2ZGZjNjAxYTEyMTYxZjgxYzhhYTI5MTBmYzdiZjZhZWM3ZDUwZTdjMDQ0IiwidGFnIjoiIn0%3D; expires=Fri, 26-Jan-2024 23:03:08 GMT; Max-Age=2628000; path=\/; samesite=lax<\/span>\"\n    <span class=sf-dump-index>1<\/span> => \"<span class=sf-dump-str title=\"460 characters\">ska_food_market_india_session=eyJpdiI6ImJSYjYzZjNTU0s2TW1naG1pTEdkMmc9PSIsInZhbHVlIjoiTS9qazVQNUJuWURCbk9RejV3SU1PR21hTy9JazdBb3NDNUtxemJERXhST3NBVWc3NVNycmxKRlBOY3NkUW9uenpnMWZ4R0FCOGo3NEFTUHJLcmZ5TkduS0NMcGhIb1pXUG9VZ0J1TW5ibk5Td3Z4WExSc0ZUSW9oSWRtSmRadUgiLCJtYWMiOiI3NGRlODc3NzIzNGYwY2QyYWU1YmI4NDRlMTFkMDQ0M2I2ZGRhNWE2OWUwYzA3OWQxYThkMTYwNDhjNDQ0ZDIwIiwidGFnIjoiIn0%3D; expires=Fri, 26-Jan-2024 23:03:08 GMT; Max-Age=2628000; path=\/; httponly; samesite=lax<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>Set-Cookie<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"400 characters\">XSRF-TOKEN=eyJpdiI6Ikd5UXZHZ002YzJPZG5MZGw2S3dkQ2c9PSIsInZhbHVlIjoic0hIcndIWThhWVh5bnF6eVZvTms1S1NIVi9mNmU4NDBuRzZQUEtDdi9VcFF3cUlqOVcyanY3UzNPQ1g4YnJ4bmhqWUhFNlNXMUxaOGtnd0FVbjRyOStGYzg3TGplUi9TTUtrbnMzeVhnd3VhV3dkZUUxbXVtZGY1R1FPWDV1ajIiLCJtYWMiOiI3OTc4ZGJiMTI1OGRiMDQ0NzExZjA2ZGZjNjAxYTEyMTYxZjgxYzhhYTI5MTBmYzdiZjZhZWM3ZDUwZTdjMDQ0IiwidGFnIjoiIn0%3D; expires=Fri, 26-Jan-2024 23:03:08 GMT; path=\/<\/span>\"\n    <span class=sf-dump-index>1<\/span> => \"<span class=sf-dump-str title=\"429 characters\">ska_food_market_india_session=eyJpdiI6ImJSYjYzZjNTU0s2TW1naG1pTEdkMmc9PSIsInZhbHVlIjoiTS9qazVQNUJuWURCbk9RejV3SU1PR21hTy9JazdBb3NDNUtxemJERXhST3NBVWc3NVNycmxKRlBOY3NkUW9uenpnMWZ4R0FCOGo3NEFTUHJLcmZ5TkduS0NMcGhIb1pXUG9VZ0J1TW5ibk5Td3Z4WExSc0ZUSW9oSWRtSmRadUgiLCJtYWMiOiI3NGRlODc3NzIzNGYwY2QyYWU1YmI4NDRlMTFkMDQ0M2I2ZGRhNWE2OWUwYzA3OWQxYThkMTYwNDhjNDQ0ZDIwIiwidGFnIjoiIn0%3D; expires=Fri, 26-Jan-2024 23:03:08 GMT; path=\/; httponly<\/span>\"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-1819720645\", {\"maxDepth\":0})<\/script>\n","session_attributes":"<pre class=sf-dump id=sf-dump-280339513 data-indent-pad=\"  \"><span class=sf-dump-note>array:10<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>_token<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">LbRk8DIrIshMX6tutNXhgf6FGMDr1BJH5e58Dhze<\/span>\"\n  \"<span class=sf-dump-key>_flash<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    \"<span class=sf-dump-key>old<\/span>\" => []\n    \"<span class=sf-dump-key>new<\/span>\" => []\n  <\/samp>]\n  \"<span class=sf-dump-key>locale<\/span>\" => \"<span class=sf-dump-str title=\"2 characters\">en<\/span>\"\n  \"<span class=sf-dump-key>currency_code<\/span>\" => \"<span class=sf-dump-str title=\"5 characters\">Rupee<\/span>\"\n  \"<span class=sf-dump-key>local_currency_rate<\/span>\" => \"<span class=sf-dump-str>1<\/span>\"\n  \"<span class=sf-dump-key>currency_symbol<\/span>\" => \"<span class=sf-dump-str>&#8377;<\/span>\"\n  \"<span class=sf-dump-key>currency_symbol_alignment<\/span>\" => \"<span class=sf-dump-str>0<\/span>\"\n  \"<span class=sf-dump-key>stock_location_id<\/span>\" => <span class=sf-dump-num>1<\/span>\n  \"<span class=sf-dump-key>_previous<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    \"<span class=sf-dump-key>url<\/span>\" => \"<span class=sf-dump-str title=\"31 characters\">https:\/\/localhost\/ska_web\/login<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>PHPDEBUGBAR_STACK_DATA<\/span>\" => []\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-280339513\", {\"maxDepth\":0})<\/script>\n"}}, "X64729edfb590723e6055ec0b39edbfe2");
+        
+            </script>
+        </body>
+        
+        </html>
         <!-- Mobile Menu -->
         <div class="mobile-menu-overlay"></div>
         <div class="mobile-menu-container">
